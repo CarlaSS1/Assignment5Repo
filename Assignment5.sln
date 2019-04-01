@@ -3,17 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment5", "Assignment5\Assignment5.csproj", "{D6C24E1A-0A3A-4332-A249-D5C9ED4571F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment5", "Assignment5\Assignment5.csproj", "{D6C24E1A-0A3A-4332-A249-D5C9ED4571F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem2", "Problem2\Problem2.csproj", "{07E90050-6AAB-4069-91D0-B9AF10DF1DB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem2", "Problem2\Problem2.csproj", "{07E90050-6AAB-4069-91D0-B9AF10DF1DB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem3", "Problem3\Problem3.csproj", "{A4EA0207-835D-45F9-B627-0EBF552A1A4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem3", "Problem3\Problem3.csproj", "{A4EA0207-835D-45F9-B627-0EBF552A1A4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem4", "Problem4\Problem4.csproj", "{7E45AA39-3EAC-40A4-9241-4EA27E78E496}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem4", "Problem4\Problem4.csproj", "{7E45AA39-3EAC-40A4-9241-4EA27E78E496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem5", "Problem5\Problem5.csproj", "{11E07F27-2DC4-4DAD-8008-A091511EBF81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem5", "Problem5\Problem5.csproj", "{11E07F27-2DC4-4DAD-8008-A091511EBF81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment5UnitTests", "Assignment5UnitTests\Assignment5UnitTests.csproj", "{72D0CDE2-9DC1-4FC9-946E-19C465412462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment5UnitTests", "Assignment5UnitTests\Assignment5UnitTests.csproj", "{72D0CDE2-9DC1-4FC9-946E-19C465412462}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{6F0620F2-F204-4F11-8DEB-DD1FF82C7EB8}"
+	ProjectSection(SolutionItems) = preProject
+		AssignedWorkList.txt = AssignedWorkList.txt
+		CarlaSS1\Assignment5\Assignment 5.docx = CarlaSS1\Assignment5\Assignment 5.docx
+		StatementOfAuthorship.txt = StatementOfAuthorship.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
