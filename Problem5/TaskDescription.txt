@@ -1,0 +1,20 @@
+﻿Problem 5
+Implement a series of classes to represent a multi-adapter plug. Plugs are different in many countries and when travelling adapters are required. A plug consists of the following: 
+1.	Type (A through L) 
+2.	Prong count 
+3.	Rating 
+	a.	Amperage 
+	b.	Voltage 
+4.	Whether the plug is polarized or not 
+
+There are two actions a plug can perform, connect and disconnect. When connecting the outlet should be provided to the plug and when disconnecting there is no need to supply the outlet. 
+An outlet consists of the following: 
+1.	Type (A through L) 
+2.	Prong count 
+3.	Rating 
+	a.	Amperage 
+	b.	Voltage 
+4.	Whether the plug is polarized or not 
+
+During implementation you must consider that any plug can connect to any outlet. If the plug and the outlet match, a connection can be made immediately, if the plug and the outlet do not match, the implementation must find the appropriate outlet for the provided plug and perform the connection seamlessly from the perspective of the plug. If no match is found an exception must be thrown indicating that no match was found. 
+For simplicity only implement the plug types A, C, D, G, and H. It is recommended to research the various plug types and outlet types to understand what they consist of to assist in designing and implementing the classes. 

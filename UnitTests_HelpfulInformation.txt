@@ -1,0 +1,45 @@
+Primary Learning Objectives 
+1.	Understand various design patterns 
+2.	Understand how to implement design patterns 
+3.	Understand the role of design patterns 
+
+Requirements 
+For each of the following problems, you must 
+1.	Identify the correct design pattern 
+2.	Implement the design pattern identified 
+3.	Create a class library using .NET Standard 2.0 (NO EXCEPTIONS) for each problem. The name of the class library must correspond to the problem, (i.e. “ProblemX”, where X is the number of the problem). 
+This assignment can be completed in groups of up to 5 members maximum (NO EXCEPTIONS). 
+Only one group member needs to submit the solution. 
+Please include the names of the other groups members when submitting. 
+
+Some of the above problems can be solved by design patterns we covered in class and some cannot. 
+During implementation, if more than one pattern is used to solve a given problem that is acceptable. 
+For each problem, you are expected to research, understand, and learn how to implement them using best practices for this assignment. 
+Since each implementation is a separate class library, there is no need for a main method. Do not implement a main method for any reason. Unit tests must be used to test the implementation. 
+You will also need to create 4 unique unit tests for any class library implementing a design pattern as listed above. 
+The final part of this assignment is to create a report describing the following for each problem: 
+1.	What pattern or patterns were used to solve the problem? 
+2.	Why the pattern or patterns were chosen to solve the problem? 
+3.	What challenges were faced while attempting to solve the problem? 
+4.	Include any references or documentation found during your research on solving the problem 
+
+Please export the word document as a PDF and include the PDF in your submission. 
+Assignment Checklist 
+This checklist does not replace the official assignment rubric on eLearn and is to be used as a guideline only. Please check eLearn for full details regarding the assignment rubric. 
+1.	Ensure source code follows all naming conventions and standards. 
+2.	Ensure source code fully meets the specifications as described above. 
+3.	Ensure source code utilizes constructs and programming concepts effectively. 
+4.	Ensure source code includes XML documentation. 
+5.	Ensure Unit tests are created and run successfully in a separate unit test project. 
+6.	Ensure a report is created which outlines choices and findings. 
+
+Hints 
+1.	https://www.dofactory.com/net/design-patterns 
+2.	https://www.tutorialspoint.com/design_pattern/index.htm 
+3.	https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Design-Patterns-Factories 
+4.	https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets 
+5.	https://en.wikipedia.org/wiki/Auction 
+6.	https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/integral-typestable 
+7.	https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2017 
+ 
+ 

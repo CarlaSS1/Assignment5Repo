@@ -1,0 +1,12 @@
+﻿Implement a series of classes to represent and create children’s toys. There are many types of children’s toys, the most prominent toys are cars, dollhouses, stuffed animals, and rainbow stackers. All toys consist of the following: 
+1.	Cost 
+2.	Description 
+3.	Name 
+4.	Manufacturing Company 
+5.	Year of manufacture 
+6.	Minimum age limit 
+7.	Maximum age limit 
+8.	Whether they contain parts which could be considered a choking hazard 
+9.	Weight 
+
+Each class implemented must describe the toy that it represents and is not meant to be an empty class. Each class implemented must have a minimum of 3 properties which describe the toy and 2 methods which are actions the toy can perform. These additional properties do not have to be overly in-depth, however they must not be overly generic, (i.e. a property called colour would be applied to all toys and must not be used as a specific property of a given toy, however properties such as ring count and number of rooms would apply to a rainbow stacker and a dollhouse respectively). The methods must also be specific to the toy and follow the same rules as the additional properties. 

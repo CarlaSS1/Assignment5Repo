@@ -1,0 +1,38 @@
+﻿Implement a series of classes to build a computer. A computer is a complex entity and consists of the following: 
+1.	Hard Drive 
+	a.	Capacity 
+	b.	Type (SSD or HDD) 
+	c.	Read speed 
+	d.	Write speed 
+2.	Motherboard 
+	a.	Number of memory slots 
+	b.	Power consumption 
+	c.	Number of PCI slots 
+	d.	Form factor 
+	e.	Hard drive limit 
+	f.	CPU 
+	g.	Memory 
+	h.	Graphics card 
+3.	CPU 
+	a.	Speed 
+	b.	Manufacturer (Intel, AMD) 
+	c.	Socket Type 
+	d.	Cache size 
+	e.	Number of cores 
+4.	Memory 
+	a.	Read speed 
+	b.	Write speed 
+	c.	Type (DDR1, DDR2, DDR3, DDR4) 
+	d.	Amount in GB 
+5.	Graphics card 
+	a.	Fan count 
+	b.	Speed 
+	c.	Video memory 
+	d.	Number of CUDA cores 
+6.	Case 
+	a.	Length 
+	b.	Width 
+	c.	Height 
+	d.	Number of fans 
+	e.	Number of vents 
+Each class implemented should have error handling built in and throw exceptions when invalid or nonsensical information is provided, (i.e. a CPU cannot have a speed less than 0). All properties within each class must use the best datatype to represent the value, (i.e. CPU speed should be a double not an integer). 	 
