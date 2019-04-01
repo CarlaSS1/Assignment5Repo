@@ -25,14 +25,17 @@ namespace Problem2
 
         public int Fans { get; set; }
 
+        public int Vents { get; set; }
+
         public Case() {}
 
-        public Case(double length, double width, double height, int fans)
+        public Case(double length, double width, double height, int fans, int vents)
         {
             Length = length;
             Width = width;
             Height = height;
             Fans = fans;
+            Vents = vents;
         }
     }
 }
