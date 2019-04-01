@@ -20,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{6F0620F2
 		AssignedWorkList.txt = AssignedWorkList.txt
 		CarlaSS1\Assignment5\Assignment 5.docx = CarlaSS1\Assignment5\Assignment 5.docx
 		StatementOfAuthorship.txt = StatementOfAuthorship.txt
+		UnitTests_HelpfulInformation.txt = UnitTests_HelpfulInformation.txt
 	EndProjectSection
 EndProject
 Global

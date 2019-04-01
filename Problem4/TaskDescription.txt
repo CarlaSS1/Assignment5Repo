@@ -1,0 +1,5 @@
+﻿Problem 4 
+Implement a series of classes to represent an auction. At an auction, there is an auctioneer who announces items for auction, prices for items being sold, and when the bidding for a given item is closed the auctioneer announces the highest bidder. 
+During the process of the auction bidders can declare their amount which they would like to bid for a given item to the auctioneer. If a bidder bids a price higher than another bidder (or higher than the initial price of the item if the bid is the first bid) for the given item, the auctioneer then announces the new current price as the current price to all the bidders.  
+An item can be bid upon a maximum of 5 times before being sold. Once an item is bid on 5 times, the highest bidder receives the item and leaves the auction and no longer receives updates about the auction. Bidders can register and unregister at will.  
+Bidders have a maximum limit that they can spend for any given item and cannot exceed this limit. An item for auction has a starting bid price and year of creation. 
