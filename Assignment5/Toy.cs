@@ -1,9 +1,9 @@
 ﻿/*
- * I, [name], student number [studentid], certify that all code submitted is my own work; 
+ * I, Riley Hancox, student number [studentid], certify that all code submitted is my own work; 
  * that I have not copied it from any other source. I also certify that I have not allowed my work to 
  * be copied by others.
  * 
- * Date: Date you created the class.
+ * Date: April 1, 2019
  */
 
 using System;
