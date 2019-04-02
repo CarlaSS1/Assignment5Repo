@@ -17,6 +17,10 @@ namespace Problem2
     /// </summary>
     public class Case
     {
+        /// <summary>
+        /// Gets or sets a case length
+        /// </summary>
+        /// <value>The width of a case.</value>
         public double Length { get; set; }
 
         public double Width { get; set; }
