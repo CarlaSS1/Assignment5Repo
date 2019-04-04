@@ -20,18 +20,45 @@ namespace Assignment5
         // TO DO - Make 1 property that describes the toy and have
         // 2 method which are actions that the toy can perform.
 
+        /// <summary>
+        /// Gets or sets the ring count
+        /// </summary>
+        /// <value>The ring count</value>
         public int RingCount { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ring shape.
+        /// </summary>
+        /// <value>The ring shape.</value>
         public string RingShape { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="RainbowStacker"/> class.
+        /// </summary>
         public RainbowStacker()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="RainbowStacker"/> class.
+        /// </summary>
+        /// <param name="id">Global Unique ID.</param>
         public RainbowStacker(Guid id) : base(id)
         {
         }
 
+        /// <summary>
+        /// Initalizes a new instance of <see cref="RainbowStacker"/> class.
+        /// </summary>
+        /// <param name="id">Global Unique ID.</param>
+        /// <param name="cost">The cost.</param>
+        /// <param name="description">The description.</param>
+        /// <param name="name">The name.</param>
+        /// <param name="manufacturingCompany">The manufacturing company.</param>
+        /// <param name="year">The year.</param>
+        /// <param name="ageLimitMax">Maximum age limit.</param>
+        /// <param name="ageLimitMin">Minimum age limit.</param>
+        /// <param name="weight">The weight</param>
         public RainbowStacker(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight)
         {
         }
