@@ -15,8 +15,23 @@ namespace Problem2
     /// </summary>
     public abstract class Computer
     {
+        /// <summary>
+        /// Gets or sets a global unique identifier.
+        /// </summary>
+        /// <value>The global unique identifier.</value>
         public Guid Id { get; set; }
 
+        // TO DO - Deciding what should be in this class.
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="Computer"/> class.
+        /// </summary>
+        public Computer() { }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="Computer"/> class.
+        /// </summary>
+        /// <param name="id">Global Unique ID</param>
         protected  Computer(Guid id)
         {
             Id = id;
@@ -34,3 +49,6 @@ namespace Problem2
 // has 1 to many memory
 // has 1 case
 // has 1 CPU
+
+// Uses the Builder Pattern.
+// Look over Assignment 2 for your example.
