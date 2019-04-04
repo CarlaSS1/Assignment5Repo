@@ -13,20 +13,23 @@ using System.Text;
 namespace Problem3
 {
     /// <summary>
-    /// Represent a mail from a mailroom
+    /// Represents a sender of a mail.
     /// </summary>
-    public class Mail
+    public class Sender
     {
-        public double Weight { get; set; }
+        public string Name { get; set; }
 
-        public double PostalCost { get; set; }
+        public string Address { get; set; }
 
-        public Mail()
+        public Sender()
         {
 
         }
 
+        public Sender(string name, string address)
+        {
+            Name = name ?? throw new ArgumentNullException(nameof(name));
+            Address = address ?? throw new ArgumentNullException(nameof(address));
+        }
     }
 }
-
-// You can ignore priority. That's not important to the assignment.
