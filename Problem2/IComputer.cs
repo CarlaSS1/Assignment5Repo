@@ -15,8 +15,9 @@ namespace Problem2
     /// <summary>
     /// Represents an interface for a Computer.
     /// </summary>
-    public interface IComputer
+    public interface IComputer<out T> where T : Computer
     {
-
+        // not sure if this is necessary
+        T Build();
     }
 }

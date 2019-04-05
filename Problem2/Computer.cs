@@ -22,6 +22,7 @@ namespace Problem2
         public Guid Id { get; set; }
 
         // TO DO - Deciding what should be in this class.
+        
 
         /// <summary>
         /// Initializes a new instance of <see cref="Computer"/> class.
@@ -52,3 +53,6 @@ namespace Problem2
 
 // Uses the Builder Pattern.
 // Look over Assignment 2 for your example.
+// PC cannot go with out a Motherboard
+// PC cannot go without a hard drive.
+// PC can go without a case.

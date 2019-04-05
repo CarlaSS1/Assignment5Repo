@@ -15,13 +15,28 @@ namespace Problem2
     /// <summary>
     /// Represents a builder of a computer
     /// </summary>
-    public class ComputerBuilder
+    public class ComputerBuilder : IComputer<Computer>
     {
+        private readonly Computer computer;
+
+        public Motherboard Board { get; set; }
+
         /// <summary>
         /// Initializes a new instance of <see cref="ComputerBuilder"/> class.
         /// </summary>
-        public ComputerBuilder() {}
+        public ComputerBuilder()
+        {
+
+        }
+
+        public Computer Build()
+        {
+            throw new NotImplementedException();
+        }
+
+
 
         // TO DO - Revisit the Builder example from the slides and notes.
+
     }
 }
