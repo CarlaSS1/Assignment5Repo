@@ -7,6 +7,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 
 namespace Problem2
 {
@@ -21,8 +22,20 @@ namespace Problem2
         /// <value>The global unique identifier.</value>
         public Guid Id { get; set; }
 
+        /// <summary>
+        /// Gets a Motherboard.
+        /// </summary>
+        /// <value>A mother board.</value>
+        public Motherboard Board { get; }
+
+        /// <summary>
+        /// Gets a case
+        /// </summary>
+        /// <value>A Computer case</value>
+        public Case Case { get; }
+
         // TO DO - Deciding what should be in this class.
-        
+
 
         /// <summary>
         /// Initializes a new instance of <see cref="Computer"/> class.
@@ -56,3 +69,5 @@ namespace Problem2
 // PC cannot go with out a Motherboard
 // PC cannot go without a hard drive.
 // PC can go without a case.
+
+// Mother board usually has 2 - 4 memory slots

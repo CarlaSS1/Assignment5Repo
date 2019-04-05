@@ -18,6 +18,11 @@ namespace Problem2
     public class Motherboard
     {
         /// <summary>
+        /// Gets or sets the name of a motherboard
+        /// </summary>
+        /// <value>Name of a motherboard.</value>
+        public string Name { get; set; }
+        /// <summary>
         /// Gets or sets form factor
         /// </summary>
         /// <value>The form factor.</value>

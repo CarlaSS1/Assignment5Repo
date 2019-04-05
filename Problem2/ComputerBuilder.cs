@@ -24,19 +24,32 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="ComputerBuilder"/> class.
         /// </summary>
-        public ComputerBuilder()
-        {
+        public ComputerBuilder() { }
 
+        /// <summary>
+        /// Builds the computer.
+        /// </summary>
+        /// <returns></returns>
+        public Computer Build()
+        {
+            return this.computer;
         }
 
-        public Computer Build()
+        public IComputer<Computer> AddHardDrive(int count)
         {
             throw new NotImplementedException();
         }
 
+        public IComputer<Computer> SetHardDrive(int count)
+        {
+            throw new NotImplementedException();
+        }
+
+        // TO DO - Verify parts.
+
 
 
         // TO DO - Revisit the Builder example from the slides and notes.
-
     }
 }
+

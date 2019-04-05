@@ -17,7 +17,12 @@ namespace Problem2
     /// </summary>
     public interface IComputer<out T> where T : Computer
     {
+        IComputer<T> AddHardDrive(int count);
+
         // not sure if this is necessary
         T Build();
+
+        // TO DO - Find a propety that is typically set in a computer.
+        IComputer<T> SetHardDrive(int count);
     }
 }
