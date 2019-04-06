@@ -22,18 +22,48 @@ namespace Problem2
     /// </summary>
     public class Memory
     {
+        /// <summary>
+        /// Gets or sets the motherboard
+        /// </summary>
+        /// <value>The mother board.</value>
+        public Motherboard Board { get; set; }
+
+        // May have a variable that validates the read speed
+        // May convert it into a string.
         public int ReadSpeed { get; set; }
 
+        // May have a variable that validates the write speed
+        // May convert it into a string.
         public int WriteSpeed { get; set; }
 
+        /// <summary>
+        /// Gets or sets the memory type.
+        /// </summary>
+        /// <value>Type of memory.</value>
         public MemoryType TypeMemory { get; set; }
 
+        /// <summary>
+        /// Gets or sets the capacity
+        /// </summary>
+        /// <value>The capacity</value>
         public double Capacity { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Memory"/> class.
+        /// </summary>
         public Memory() {}
 
-        public Memory(int readSpeed, int writeSpeed, MemoryType typeMemory, double capacity)
+        /// <summary>
+        /// Initializes a new instance of <see cref="Memory"/> class.
+        /// </summary>
+        /// <param name="board">The motherboard.</param>
+        /// <param name="readSpeed">The read speed.</param>
+        /// <param name="writeSpeed">The write speed.</param>
+        /// <param name="typeMemory">The Memory type.</param>
+        /// <param name="capacity">The capacity.</param>
+        public Memory(Motherboard board, int readSpeed, int writeSpeed, MemoryType typeMemory, double capacity)
         {
+            Board = board;
             ReadSpeed = readSpeed;
             WriteSpeed = writeSpeed;
             TypeMemory = typeMemory;

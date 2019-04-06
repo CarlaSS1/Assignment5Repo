@@ -17,14 +17,34 @@ namespace Problem2
     /// </summary>
     public class GraphicsCard
     {
+        /// <summary>
+        /// Gets or sets the name of a graphics card
+        /// </summary>
+        /// <value>Graphics card name</value>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets Fan count
+        /// </summary>
+        /// <value>The Fan Count.</value>
         public int FanCount { get; set; }
 
+        /// <summary>
+        /// Gets or sets speed of the graphics card.
+        /// </summary>
+        /// <value>The speed.</value>
         public double Speed { get; set; }
 
+        /// <summary>
+        /// Gets or sets Video memory
+        /// </summary>
+        /// <value>Video memory of a graphics card.</value>
         public double VideoMemory { get; set; }
 
+        /// <summary>
+        /// Gets or sets Cuda cores
+        /// </summary>
+        /// <value>The cuda cores</value>
         public int CUDACores { get; set; }
 
         /// <summary>
