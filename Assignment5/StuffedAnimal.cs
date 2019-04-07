@@ -20,6 +20,17 @@ namespace Assignment5
         // TO DO - Make 3 properties that describes the toy and have
         // 2 method which are actions that the toy can perform.
 
+        /// <summary>
+        /// Gets or sets the animal type.
+        /// </summary>
+        /// <value>The animal type.</value>
+        public string AnimalType {get; set;}
+
+        /// <summary>
+        /// Gets or sets the stuffing type.
+        /// </summary>
+        /// <value>The stuffing type.</value>
+        public string StuffingType {get; set;}
        
         /// <summary>
         /// Initializes a new instance of <see cref="StuffedAnimal"/> class.
