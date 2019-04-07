@@ -24,7 +24,10 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="ComputerBuilder"/> class.
         /// </summary>
-        public ComputerBuilder() { }
+        public ComputerBuilder()
+        {
+            this.computer = new Computer();
+        }
 
         /// <summary>
         /// Builds the computer.
@@ -45,8 +48,45 @@ namespace Problem2
             throw new NotImplementedException();
         }
 
-        // TO DO - Verify parts.
+        public IComputer<Computer> AddMotherBoard(Motherboard board)
+        {
+            if(this.computer.Board == null)
+            {
+                // Disposes the original contents of the motherboard.
+                this.Board.Dispose();
+            }
 
+            this.computer.Board = board;
+            return this;
+        }
+
+        public IComputer<Computer> AddCase(int count)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IComputer<Computer> SetCase(int count)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IComputer<Computer> SetMotherBoard(int count)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Verifys that the Cpu speed is valid
+        /// </summary>
+        /// <param name="speed"></param>
+        /// <returns></returns>
+        public IComputer<Computer> SetCpuSpeed(double speed)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        // TO DO - Verify parts.
 
 
         // TO DO - Revisit the Builder example from the slides and notes.

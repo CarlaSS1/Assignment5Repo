@@ -18,9 +18,15 @@ namespace Problem2
     public class Motherboard : IDisposable
     {
         /// <summary>
-        /// Cpu is a part of a motherboard.
+        /// Gets or sets a CPU
         /// </summary>
-        private Cpu cpu = new Cpu();
+        /// <value>The CPU</value>
+        /// 
+        /// <remarks>
+        /// To prevent confusion, it is called a Processor, which is
+        /// another nickname for a CPU.
+        /// </remarks>
+        public Cpu Processor { get; set; }
 
         /// <summary>
         /// Gets or sets the name of a motherboard
@@ -83,16 +89,20 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="Motherboard"/> class.
         /// </summary>
+        /// <param name="name">The name.</param>
         /// <param name="formFactor">The form factor.</param>
         /// <param name="powerConsumption">The power consumption.</param>
         /// <param name="hardDriveLimit">The hard drive limit.</param>
+        /// <param name="processor">The CPU</param>
         /// <param name="memorySlots">The memory slots.</param>
         /// <param name="pCISlots">The PCI slots.</param>
-        public Motherboard(string formFactor, double powerConsumption, int hardDriveLimit, int memorySlots, int pCISlots)
+        public Motherboard(string name, string formFactor, double powerConsumption, int hardDriveLimit, Cpu processor, int memorySlots, int pCISlots)
         {
+            Name = name ?? throw new ArgumentNullException(nameof(name));
             FormFactor = formFactor ?? throw new ArgumentNullException(nameof(formFactor));
             PowerConsumption = powerConsumption;
             HardDriveLimit = hardDriveLimit;
+            Processor = processor;
             MemorySlots = memorySlots;
             PCISlots = pCISlots;
         }
@@ -100,6 +110,8 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="Motherboard"/> class.
         /// </summary>
+        /// <param name="processor">The CPU</param>
+        /// <param name="name">The Name.</param>
         /// <param name="formFactor">The form factor.</param>
         /// <param name="powerConsumption">The power consumption.</param>
         /// <param name="hardDriveLimit">The hard drive limit.</param>
@@ -108,8 +120,10 @@ namespace Problem2
         /// <param name="hardDrives">List of hard drives.</param>
         /// <param name="memories">A list of memories.</param>
         /// <param name="graphicCard">The graphics card.</param>
-        public Motherboard(string formFactor, double powerConsumption, int hardDriveLimit, int memorySlots, int pCISlots, List<HardDrive> hardDrives, List<Memory> memories, GraphicsCard graphicCard)
+        public Motherboard(Cpu processor, string name, string formFactor, double powerConsumption, int hardDriveLimit, int memorySlots, int pCISlots, List<HardDrive> hardDrives, List<Memory> memories, GraphicsCard graphicCard)
         {
+            Processor = processor;
+            Name = name ?? throw new ArgumentNullException(nameof(name));
             FormFactor = formFactor ?? throw new ArgumentNullException(nameof(formFactor));
             PowerConsumption = powerConsumption;
             HardDriveLimit = hardDriveLimit;
@@ -120,23 +134,37 @@ namespace Problem2
             GraphicCard = graphicCard ?? throw new ArgumentNullException(nameof(graphicCard));
         }
 
-        public void AddCpu(string name)
+        /// <summary>
+        /// Adds the CPU into the motherboard.
+        /// </summary>
+        /// <param name="name">The name of Cpu.</param>
+        /// <param name="speed">The speed of CPU.</param>
+        /// <param name="cpuManufacturer">Cpu Manufacturer</param>
+        /// <param name="socketTypes">The Socket Type</param>
+        /// <param name="cacheSize">The Cache Size</param>
+        /// <param name="numberOfCores">The number of cores.</param>
+        public void AddCpu(string name, double speed, CpuManufacturer cpuManufacturer, CpuSocketTypes socketTypes, int cacheSize, int numberOfCores)
         {
-            // Cpu is a part of the motherboard.
-            // it cannot work without it.
-            cpu = new Cpu(this, name);
+
+            this.Processor = new Cpu(this, name, speed, cpuManufacturer, socketTypes, cacheSize, numberOfCores);
         }
 
+
+        /// <summary>
+        /// Disposes of CPU as part is being replaced
+        /// </summary>
         public void Dispose()
         {
-            throw new NotImplementedException();
+            // Might add all  the other parts/
+            Processor.Dispose();
         }
     }
 }
 
 // Motherboard has a graphics card
-// Motherboard has a Cpu
+// Motherboard is a part of a Cpu
 // Motherboard has 1 to many Hard drives
 // Motherboard has 1 to many memory
+// Motherboard is a part of a PC.
 
 // See this for more information about relationships: https://social.msdn.microsoft.com/Forums/en-US/0b6677dc-3eb6-4eae-9c8f-c042ccbfefb3/what-is-composition-in-c-?forum=csharplanguage

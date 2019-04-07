@@ -26,8 +26,10 @@ namespace Problem2
     /// <summary>
     /// Represents the CPU.
     /// </summary>
-    public class Cpu
+    public class Cpu : IDisposable
     {
+        private double speed;
+
         /// <summary>
         /// Gets or Sets a motherboard
         /// </summary>
@@ -51,7 +53,21 @@ namespace Problem2
         /// Gets or sets the CPU speed
         /// </summary>
         /// <value>Cpu Speed.</value>
-        public double Speed { get; set; }
+        public double Speed
+        {
+            get => Speed;
+            set
+            {
+               if(value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException($"{nameof(value)} is under 0 for {nameof(Cpu.Name)}");
+                }
+                else
+                {
+                    speed = value;
+                }
+            }
+        }
 
         /// <summary>
         /// Gets or sets Manufacturer
@@ -108,6 +124,12 @@ namespace Problem2
             SocketType = socketType;
             CacheSize = cacheSize;
             NumberOfCores = numberOfCores;
+        }
+
+        public void Dispose()
+        {
+            // Let it be destroyed by itself.
+
         }
     }
 }

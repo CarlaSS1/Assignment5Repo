@@ -12,9 +12,9 @@ using System.Collections.Generic;
 namespace Problem2
 {
     /// <summary>
-    /// Represents an abstract Computer
+    /// Represents a Computer
     /// </summary>
-    public abstract class Computer
+    public class Computer
     {
         /// <summary>
         /// Gets or sets a global unique identifier.
@@ -26,16 +26,13 @@ namespace Problem2
         /// Gets a Motherboard.
         /// </summary>
         /// <value>A mother board.</value>
-        public Motherboard Board { get; }
+        public Motherboard Board { get; set; }
 
         /// <summary>
         /// Gets a case
         /// </summary>
         /// <value>A Computer case</value>
-        public Case Case { get; }
-
-        // TO DO - Deciding what should be in this class.
-
+        public Case GetCase { get; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="Computer"/> class.
@@ -50,6 +47,21 @@ namespace Problem2
         {
             Id = id;
         }
+
+        // May not need sin ce the builder is doing all the work
+        /// <summary>
+        /// Initinalizes a new instance of <see cref="Computer"/> class.
+        /// </summary>
+        /// <param name="id">The Global Unique ID</param>
+        /// <param name="board">The mother board</param>
+        /// <param name="getCase">Gets the case of the PC</param>
+        public Computer(Guid id, Motherboard board, Case getCase) : this(id)
+        {
+            Board = board ?? throw new ArgumentNullException(nameof(board));
+            GetCase = getCase ?? throw new ArgumentNullException(nameof(getCase));
+        }
+
+
 
         // What's a computer.
 

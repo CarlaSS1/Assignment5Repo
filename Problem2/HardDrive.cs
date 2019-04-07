@@ -38,11 +38,25 @@ namespace Problem2
         /// <value>The drive type.</value>
         public HardDriveType DriveType { get; set; }
 
-        // May have a variable that validates the read speed
-        public string ReadSpeed { get; set; }
+        /// <summary>
+        /// Gets or sets the Readspeed of a hard drive.
+        /// </summary>
+        /// <value>The read speed.</value>
+        /// 
+        /// <remarks>
+        /// This will be in MB/s
+        /// </remarks>
+        public double ReadSpeed { get; set; }
 
-        // may haave a variable that validates the write speed
-        public string WriteSpeed { get; set; }
+        /// <summary>
+        /// Gets or sets the write speed
+        /// </summary>
+        /// <value>The write speed</value>
+        /// 
+        /// <remarks>
+        /// This will be in MB/S
+        /// </remarks>
+        public double WriteSpeed { get; set; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="HardDrive"/> class.
@@ -56,12 +70,12 @@ namespace Problem2
         /// <param name="driveType">The Drive type.</param>
         /// <param name="readSpeed">The read speed.</param>
         /// <param name="writeSpeed">The write speed.</param>
-        public HardDrive(double capacity, HardDriveType driveType, string readSpeed, string writeSpeed)
+        public HardDrive(double capacity, HardDriveType driveType, double readSpeed, double writeSpeed)
         {
             Capacity = capacity;
             DriveType = driveType;
-            ReadSpeed = readSpeed ?? throw new ArgumentNullException(nameof(readSpeed));
-            WriteSpeed = writeSpeed ?? throw new ArgumentNullException(nameof(writeSpeed));
+            ReadSpeed = readSpeed;
+            WriteSpeed = writeSpeed;
         }
     }
 }
@@ -70,3 +84,9 @@ namespace Problem2
 // Any hard drives under a gb will be converted to what would look like in a gb size respectivelly.
 // But won't go far as KB.
 // The user will be noted of that.
+//
+// The read and write speed will always assume the value to be in MB.
+// If there is any value that is not in MB, it can be checked and converted - May implement last though.
+
+ // The hard drive can still have the data without the Mother board,  but becomes useless without it.
+ // It's why I do not have a dispose method because that does not have to be disposed.

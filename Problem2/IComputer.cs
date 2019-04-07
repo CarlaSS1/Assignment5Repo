@@ -19,10 +19,20 @@ namespace Problem2
     {
         IComputer<T> AddHardDrive(int count);
 
+        IComputer<T> AddMotherBoard(Motherboard board);
+
+        IComputer<T> AddCase(int count);
+
         // not sure if this is necessary
         T Build();
 
         // TO DO - Find a propety that is typically set in a computer.
         IComputer<T> SetHardDrive(int count);
+
+        IComputer<T> SetCase(int count);
+
+        IComputer<T> SetMotherBoard(int count);
+
+        IComputer<T> SetCpuSpeed(double speed);
     }
 }
