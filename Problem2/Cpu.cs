@@ -20,7 +20,7 @@ namespace Problem2
     /// <summary>
     /// Stores a list of Socket types.
     /// </summary>
-    /// <remarks>I won't anything old like a Dip socket type</remarks>
+    /// <remarks>I won't add anything old like a Dip socket type</remarks>
     public enum CpuSocketTypes{ LGA, PGA, BGA };
 
     /// <summary>
@@ -59,7 +59,10 @@ namespace Problem2
         /// <value>CPU Manufacturer</value>
         public CpuManufacturer Manufacturer { get; set; }
 
-        // Look up specific conditions as to what defines as a Socket Type
+        /// <summary>
+        /// Gets or sets a Socket type
+        /// </summary>
+        /// <value>Cpu Socket Type.</value>
         public CpuSocketTypes SocketType { get; set; }
 
         /// <summary>
@@ -79,6 +82,12 @@ namespace Problem2
         /// Initializes a new instance of <see cref="Cpu"/> class.
         /// </summary>
         public Cpu() {}
+
+        public Cpu(Motherboard board, string name)
+        {
+            Board = board ?? throw new ArgumentNullException(nameof(board));
+            Name = name ?? throw new ArgumentNullException(nameof(name));
+        }
 
         /// <summary>
         /// Initializes a new instance of <see cref="Cpu"/> class.

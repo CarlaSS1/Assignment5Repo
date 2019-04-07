@@ -66,8 +66,11 @@ namespace Problem2
 
 // Uses the Builder Pattern.
 // Look over Assignment 2 for your example.
-// PC cannot go with out a Motherboard
+// PC cannot go with out a Motherboard - Composition
 // PC cannot go without a hard drive.
 // PC can go without a case.
 
 // Mother board usually has 2 - 4 memory slots
+
+// Composition is a part of relationship - They are dependant to one another and removing one of the entities will cause the other to not work.
+// A car cannot work without it's engine.

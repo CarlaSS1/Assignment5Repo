@@ -15,8 +15,13 @@ namespace Problem2
     /// <summary>
     /// Represents a motherboard
     /// </summary>
-    public class Motherboard
+    public class Motherboard : IDisposable
     {
+        /// <summary>
+        /// Cpu is a part of a motherboard.
+        /// </summary>
+        private Cpu cpu = new Cpu();
+
         /// <summary>
         /// Gets or sets the name of a motherboard
         /// </summary>
@@ -114,6 +119,18 @@ namespace Problem2
             Memories = memories ?? throw new ArgumentNullException(nameof(memories));
             GraphicCard = graphicCard ?? throw new ArgumentNullException(nameof(graphicCard));
         }
+
+        public void AddCpu(string name)
+        {
+            // Cpu is a part of the motherboard.
+            // it cannot work without it.
+            cpu = new Cpu(this, name);
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
@@ -121,3 +138,5 @@ namespace Problem2
 // Motherboard has a Cpu
 // Motherboard has 1 to many Hard drives
 // Motherboard has 1 to many memory
+
+// See this for more information about relationships: https://social.msdn.microsoft.com/Forums/en-US/0b6677dc-3eb6-4eae-9c8f-c042ccbfefb3/what-is-composition-in-c-?forum=csharplanguage
