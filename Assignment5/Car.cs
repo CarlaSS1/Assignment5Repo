@@ -34,7 +34,7 @@ namespace Assignment5
         public Car(Guid id) : base(id)
         {
         }
-
+        
         /// <summary>
         /// Initializes a new instance of <see cref="Car"/> class.
         /// </summary>
@@ -46,8 +46,9 @@ namespace Assignment5
         /// <param name="year">The year.</param>
         /// <param name="ageLimitMax">Maximum age limit.</param>
         /// <param name="ageLimitMin">Minimum age limit.</param>
-        /// <param name="weight">The weight</param>
-        public Car(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight)
+        /// <param name="weight">The weight.</param>
+        /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
+        public Car(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
         }
     }
