@@ -16,10 +16,26 @@ namespace Assignment5
     /// Represents a car that is a toy
     /// </summary>
     public class Car : Toy
-    {
-        // TO DO - Make 3 properties that describes the toy and have
-        // 2 method which are actions that the toy can perform.
+    {      
+        
+        /// <summary>
+        /// Gets or sets the model.
+        /// </summary>
+        /// <value>The model of the toy car.</value>
+        public string Model { get; set; }
 
+        /// <summary>
+        /// Gets or sets the make.
+        /// </summary>
+        /// <value>The make of the toy car.</value>
+        public string Make { get; set; }
+
+        /// <summary>
+        /// Gets or sets the number of wheels.
+        /// </summary>
+        /// <value>The number of wheels of the toy car.</value>
+        public int NumberOfWheels { get; set; }
+   
         /// <summary>
         /// Initializes a new instance of <see cref="Car"/> class.
         /// </summary>
@@ -48,8 +64,23 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight.</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
-        public Car(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
+        public Car(Guid id, Mdouble cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
+        }
+
+        /// <summary>
+        /// Race the toy car.
+        /// </summary>
+        public void RaceToyCar(){
+            Console.Writeline("The toy car has been raced.");
+
+        }
+        /// <summary>
+        /// Open the toy car door.
+        /// </summary>
+        public void OpenToyCarDoor(){
+            Console.Writeline("The toy car door has been opened.");
+
         }
     }
 }
