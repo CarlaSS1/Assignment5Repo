@@ -17,9 +17,23 @@ namespace Assignment5
     /// </summary>
     public class StuffedAnimal : Toy
     {
-        // TO DO - Make 3 properties that describes the toy and have
-        // 2 method which are actions that the toy can perform.
+        /// <summary>
+        /// Gets or sets the animal type.
+        /// </summary>
+        /// <value>The animal type.</value>
+        public string AnimalType {get; set;}
 
+        /// <summary>
+        /// Gets or sets the stuffing type.
+        /// </summary>
+        /// <value>The stuffing type.</value>
+        public string StuffingType {get; set;}
+
+        /// <summary>
+        /// Gets or sets the stitching type.
+        /// </summary>
+        /// <value>The stitching type.</value>
+        public string StitchingType {get; set;}
        
         /// <summary>
         /// Initializes a new instance of <see cref="StuffedAnimal"/> class.
@@ -48,8 +62,23 @@ namespace Assignment5
         /// <param name="ageLimitMax">Maximum age limit.</param>
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight</param>
-        public StuffedAnimal(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight)
+        /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
+        public StuffedAnimal(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
+        }
+
+        /// <summary>
+        /// Attend a tea party.
+        /// </summary>
+        public void AttendTeaParty(){
+            Console.WriteLine("The stuffed animal attended a tea party.");
+        }
+
+        /// <summary>
+        /// Sleep in a bed.
+        /// </summary>
+        public void SleepInBed(){
+            Console.WriteLine("The stuffed animal slept in bed");
         }
     }
 }

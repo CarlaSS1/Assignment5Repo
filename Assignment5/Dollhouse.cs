@@ -17,8 +17,23 @@ namespace Assignment5
     /// </summary>
     public class Dollhouse : Toy
     {
-        // TO DO - Make 3 properties that describes the toy and have
-        // 2 method which are actions that the toy can perform.
+        /// <summary>
+        /// Gets or sets the number of rooms.
+        /// </summary>
+        /// <value>The the number of rooms.</value>
+        public int NumberOfRooms { get; set; }
+
+        /// <summary>
+        /// Gets or sets the number of floors.
+        /// </summary>
+        /// <value>The the number of floors.</value>
+        public int NumberOfFloors { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of furniture.
+        /// </summary>
+        /// <value>The list of furniture.</value>
+        public List<string> FurnitureCollection { get; set; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="Dollhouse"/> class.
@@ -26,6 +41,7 @@ namespace Assignment5
         public Dollhouse()
         {
         }
+
 
         /// <summary>
         /// Initializes a new instance of <see cref="Dollhouse"/> class.
@@ -46,9 +62,23 @@ namespace Assignment5
         /// <param name="year">The year.</param>
         /// <param name="ageLimitMax">Maximum age limit.</param>
         /// <param name="ageLimitMin">Minimum age limit.</param>
-        /// <param name="weight">The weight</param>
-        public Dollhouse(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight)
+        /// <param name="weight">The weight.</param>
+        /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
+        public Dollhouse(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
+        }
+
+        /// <summary>
+        /// Open the doll house.
+        /// </summary>
+        public void OpenDollHouse(){
+            Console.WriteLine("The doll house is opened.");
+        }        
+        /// <summary>
+        /// Close the doll house.
+        /// </summary>
+        public void CloseDollHouse(){
+            Console.WriteLine("The doll house is closed.");
         }
     }
 }

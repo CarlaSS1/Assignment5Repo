@@ -44,7 +44,7 @@ namespace Assignment5
         /// </summary>
         /// <value>The manufacturing company.</value>
         public string ManufacturingCompany { get; set; }
-
+        
         /// <summary>
         /// Gets or sets a year.
         /// </summary>
@@ -55,15 +55,19 @@ namespace Assignment5
         /// Gets or sets the maximun age limit.
         /// </summary>
         /// <value>The maximum age limit.</value>
-        public int AgeLimitMax { get; set; }
+        public int AgeLimitMaximum  { get; set; }
 
         /// <summary>
         /// Gets or sets the minimum age limit.
         /// </summary>
         /// <value>The minimum age limit</value>
-        public int AgeLimitMin { get; set; }
+        public int AgeLimitMinimum  { get; set; }
 
-        // Choking Hazard - Enum List or a Enum?
+        /// <summary>
+        /// Gets or sets is choking hazard.
+        /// </summary>
+        /// <value>Whether the toy is a choking hazard./</value>
+        public bool IsChokingHazard {get;set;}
 
         /// <summary>
         /// Gets or sets the weight.
@@ -85,6 +89,7 @@ namespace Assignment5
         /// </summary>
         public Toy() {}
 
+
         /// <summary>
         /// Initializes a new instance of <see cref="Toy"/> class.
         /// </summary>
@@ -97,16 +102,17 @@ namespace Assignment5
         /// <param name="ageLimitMax">Maximum age limit.</param>
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight</param>
-        public Toy(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight) : this(id)
+        public Toy(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : this(id)
         {
             Cost = cost;
             Description = description ?? throw new ArgumentNullException(nameof(description));
             Name = name ?? throw new ArgumentNullException(nameof(name));
             ManufacturingCompany = manufacturingCompany ?? throw new ArgumentNullException(nameof(manufacturingCompany));
             Year = year;
-            AgeLimitMax = ageLimitMax;
-            AgeLimitMin = ageLimitMin;
+            AgeLimitMaximum = ageLimitMax;
+            AgeLimitMinimum = ageLimitMin;
             Weight = weight;
+            IsChokingHazard = IsChokingHazard;
         }
     }
 }

@@ -17,8 +17,6 @@ namespace Assignment5
     /// </summary>
     public class RainbowStacker : Toy
     {
-        // TO DO - Make 1 property that describes the toy and have
-        // 2 method which are actions that the toy can perform.
 
         /// <summary>
         /// Gets or sets the ring count
@@ -31,6 +29,12 @@ namespace Assignment5
         /// </summary>
         /// <value>The ring shape.</value>
         public string RingShape { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of the ring colours.
+        /// </summary>
+        /// <value>The list of the ring colours.</value>
+        public List<string> RingColourCollection { get; set; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="RainbowStacker"/> class.
@@ -58,9 +62,24 @@ namespace Assignment5
         /// <param name="year">The year.</param>
         /// <param name="ageLimitMax">Maximum age limit.</param>
         /// <param name="ageLimitMin">Minimum age limit.</param>
-        /// <param name="weight">The weight</param>
-        public RainbowStacker(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight)
+        /// <param name="weight">The weight.</param>
+        /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
+        public RainbowStacker(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
         }
+
+        /// <summary>
+        /// Stack the rings.
+        /// </summary>
+        public void StackRings(){
+            Console.Writeline("The rings have been stacked.");
+            }
+
+        /// <summary>
+        /// Unstack the rings.
+        /// </summary>
+        public void UnstackRings(){
+            Console.Writeline("The rings have been unstacked.");
+            }
     }
 }
