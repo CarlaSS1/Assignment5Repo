@@ -38,11 +38,17 @@ namespace Problem2
         /// <value>The drive type.</value>
         public HardDriveType DriveType { get; set; }
 
-        // May have a variable that validates the read speed
-        public string ReadSpeed { get; set; }
+        /// <summary>
+        /// Gets or sets the read speed
+        /// </summary>
+        /// <value>The read speed</value>
+        public double ReadSpeed { get; set; }
 
-        // may haave a variable that validates the write speed
-        public string WriteSpeed { get; set; }
+        /// <summary>
+        /// Gets or sets the write speed
+        /// </summary>
+        /// <value>The write speed</value>
+        public double WriteSpeed { get; set; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="HardDrive"/> class.
@@ -56,12 +62,12 @@ namespace Problem2
         /// <param name="driveType">The Drive type.</param>
         /// <param name="readSpeed">The read speed.</param>
         /// <param name="writeSpeed">The write speed.</param>
-        public HardDrive(double capacity, HardDriveType driveType, string readSpeed, string writeSpeed)
+        public HardDrive(double capacity, HardDriveType driveType, double readSpeed, double writeSpeed)
         {
             Capacity = capacity;
             DriveType = driveType;
-            ReadSpeed = readSpeed ?? throw new ArgumentNullException(nameof(readSpeed));
-            WriteSpeed = writeSpeed ?? throw new ArgumentNullException(nameof(writeSpeed));
+            ReadSpeed = readSpeed;
+            WriteSpeed = writeSpeed;
         }
     }
 }

@@ -17,6 +17,21 @@ namespace Problem2
     /// </summary>
     public class Motherboard
     {
+        // Using it for reference purposes
+        private static readonly Computer computer;
+
+        /// <summary>
+        /// Gets or sets the Cpu board
+        /// </summary>
+        /// <value>The Cpu board</value>
+        public Cpu CpuBoard { get; }
+
+        /// <summary>
+        /// Gets or sets the name of the motherboard
+        /// </summary>
+        /// <value>THe Name.</value>
+        public string Name { get; set; }
+
         /// <summary>
         /// Gets or sets form factor
         /// </summary>
@@ -73,16 +88,20 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="Motherboard"/> class.
         /// </summary>
+        /// <param name="name">The name</param>
         /// <param name="formFactor">The form factor.</param>
         /// <param name="powerConsumption">The power consumption.</param>
         /// <param name="hardDriveLimit">The hard drive limit.</param>
+        /// <param name="cpuBoard">The Cpu board</param>
         /// <param name="memorySlots">The memory slots.</param>
         /// <param name="pCISlots">The PCI slots.</param>
-        public Motherboard(string formFactor, double powerConsumption, int hardDriveLimit, int memorySlots, int pCISlots)
+        public Motherboard(string name, string formFactor, double powerConsumption, int hardDriveLimit, Cpu cpuBoard, int memorySlots, int pCISlots)
         {
+            Name = name ?? throw new ArgumentNullException(nameof(name));
             FormFactor = formFactor ?? throw new ArgumentNullException(nameof(formFactor));
             PowerConsumption = powerConsumption;
             HardDriveLimit = hardDriveLimit;
+            CpuBoard = cpuBoard;
             MemorySlots = memorySlots;
             PCISlots = pCISlots;
         }
@@ -90,19 +109,23 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="Motherboard"/> class.
         /// </summary>
+        /// <param name="name">The name</param>
         /// <param name="formFactor">The form factor.</param>
         /// <param name="powerConsumption">The power consumption.</param>
         /// <param name="hardDriveLimit">The hard drive limit.</param>
+        /// <param name="cpuBoard">The Cpu board.</param>
         /// <param name="memorySlots">The memory slots.</param>
         /// <param name="pCISlots">The PCI slots.</param>
         /// <param name="hardDrives">List of hard drives.</param>
         /// <param name="memories">A list of memories.</param>
         /// <param name="graphicCard">The graphics card.</param>
-        public Motherboard(string formFactor, double powerConsumption, int hardDriveLimit, int memorySlots, int pCISlots, List<HardDrive> hardDrives, List<Memory> memories, GraphicsCard graphicCard)
+        public Motherboard(string name, string formFactor, double powerConsumption, int hardDriveLimit, Cpu cpuBoard, int memorySlots, int pCISlots, List<HardDrive> hardDrives, List<Memory> memories, GraphicsCard graphicCard)
         {
+            Name = name ?? throw new ArgumentNullException(nameof(name));
             FormFactor = formFactor ?? throw new ArgumentNullException(nameof(formFactor));
             PowerConsumption = powerConsumption;
             HardDriveLimit = hardDriveLimit;
+            CpuBoard = cpuBoard;
             MemorySlots = memorySlots;
             PCISlots = pCISlots;
             HardDrives = hardDrives ?? throw new ArgumentNullException(nameof(hardDrives));
