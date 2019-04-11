@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Problem2.Parts;
 
 namespace Problem2
 {
@@ -20,7 +21,9 @@ namespace Problem2
         // Computer has a case.
 
         // If it is solid data, don't make an interface
-        IComputer<T> AddCase();
+        IComputer<T> AddCase(Case pcCase);
+
+        IComputer<T> AddMotherboard(IMotherboard<Motherboard> motherboard);
 
         T Build();
 
@@ -29,3 +32,5 @@ namespace Problem2
         IComputer<T> SetPCName(string name);
     }
 }
+
+// Complex Object for an interface

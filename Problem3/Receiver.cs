@@ -17,8 +17,16 @@ namespace Problem3
     /// </summary>
     public class Receiver
     {
+        /// <summary>
+        /// Gets or sets the name of the receiver
+        /// </summary>
+        /// <value>The name.</value>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets receiver Address
+        /// </summary>
+        /// <value>The address.</value>
         public string Address { get; set; }
 
         public Receiver()

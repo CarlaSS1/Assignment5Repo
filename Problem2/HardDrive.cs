@@ -22,6 +22,10 @@ namespace Problem2
     /// </summary>
     public class HardDrive
     {
+        private double readSpeed;
+
+        private double writeSpeed;
+
         /// <summary>
         /// Gets or sets the capacity
         /// </summary>
@@ -42,13 +46,35 @@ namespace Problem2
         /// Gets or sets the read speed
         /// </summary>
         /// <value>The read speed</value>
-        public double ReadSpeed { get; set; }
+        public double ReadSpeed
+        {
+            get { return readSpeed; }
+            set
+            {
+                if(value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException($"{nameof(readSpeed)} cannot be 0");
+                }
+                readSpeed = value;
+            }
+        }
 
         /// <summary>
         /// Gets or sets the write speed
         /// </summary>
         /// <value>The write speed</value>
-        public double WriteSpeed { get; set; }
+        public double WriteSpeed
+        {
+            get { return writeSpeed; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException($"{nameof(writeSpeed)} cannot be 0");
+                }
+                writeSpeed = value;
+            }
+        }
 
         /// <summary>
         /// Initializes a new instance of <see cref="HardDrive"/> class.
@@ -69,6 +95,10 @@ namespace Problem2
             ReadSpeed = readSpeed;
             WriteSpeed = writeSpeed;
         }
+
+        
+
+
     }
 }
 
