@@ -10,22 +10,22 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Problem2
+namespace Problem2.Parts
 {
     /// <summary>
     /// Represents an interface for a Computer.
     /// </summary>
-    public interface IComputer<out T> where T : Computer
+    public interface IMotherboard<out T> where T : Computer
     {
-        // Computer has a case.
-
-        // If it is solid data, don't make an interface
-        IComputer<T> AddCase();
+        // Add
+        IMotherboard<T> AddHardDrive(HardDrive hardDrive);
 
         T Build();
 
         // sets - Might have to make another interface, oh my god. WHy.
 
-        IComputer<T> SetPCName(string name);
+        IMotherboard<T> SetCase(Case caseName);
+
+        IMotherboard<T> SetHardDriveLimit(int capacity);
     }
 }

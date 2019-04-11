@@ -17,10 +17,21 @@ namespace Problem3
     /// </summary>
     public class Mail
     {
+        /// <summary>
+        /// Gets or sets the weight of the mail
+        /// </summary>
+        /// <value>Weight of the mail</value>
         public double Weight { get; set; }
 
+        /// <summary>
+        /// Gets or sets the postal cost
+        /// </summary>
+        /// <value>The postal code</value>
         public double PostalCost { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Mail"/> class
+        /// </summary>
         public Mail()
         {
 

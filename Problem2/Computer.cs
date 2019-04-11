@@ -13,7 +13,7 @@ namespace Problem2
     /// <summary>
     /// Represents an abstract Computer
     /// </summary>
-    public abstract class Computer
+    public class Computer
     {
         /// <summary>
         /// Gets or sets a global unique identifier.
@@ -21,7 +21,23 @@ namespace Problem2
         /// <value>The global unique identifier.</value>
         public Guid Id { get; set; }
 
-        // TO DO - Deciding what should be in this class.
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>The name.</value>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets the motherboard
+        /// </summary>
+        /// <value>The Motherboard</value>
+        public Motherboard GetMotherboard { get; }
+
+        /// <summary>
+        /// Gets the case
+        /// </summary>
+        /// <value>The case</value>
+        public Case PCCase { get; set; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="Computer"/> class.
@@ -36,8 +52,6 @@ namespace Problem2
         {
             Id = id;
         }
-
-        // What's a computer.
 
     }
 }
