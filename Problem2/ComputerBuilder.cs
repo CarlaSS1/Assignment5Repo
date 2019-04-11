@@ -53,9 +53,10 @@ namespace Problem2
 
         // Inferace implementation
 
-        public IComputer<Computer> SetCase(Case caseName)
+        public IComputer<Computer> SetPCName(string name)
         {
-            throw new NotImplementedException();
+            this.computer.Name = name;
+            return this;
         }
 
         // Validation Methods - Unique to the Computer Builder
@@ -65,7 +66,7 @@ namespace Problem2
             if(speed <= 0)
             {
                 // TO DO - Create an error message or something.
-            }
+            } 
 
             return false;
         }

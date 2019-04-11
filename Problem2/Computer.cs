@@ -37,7 +37,7 @@ namespace Problem2
         /// Gets the case
         /// </summary>
         /// <value>The case</value>
-        public Case PCCase { get; }
+        public Case PCCase { get; set; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="Computer"/> class.

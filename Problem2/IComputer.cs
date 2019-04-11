@@ -17,11 +17,7 @@ namespace Problem2
     /// </summary>
     public interface IComputer<out T> where T : Computer
     {
-        // Remove the AddHardDrive and SetHardDriveLimit.
         // Computer has a case.
-
-        // Add
-        IComputer<T> AddHardDrive(HardDrive hardDrive);
 
         // If it is solid data, don't make an interface
         IComputer<T> AddCase();
@@ -30,6 +26,6 @@ namespace Problem2
 
         // sets - Might have to make another interface, oh my god. WHy.
 
-        IComputer<T> SetCase(Case caseName);
+        IComputer<T> SetPCName(string name);
     }
 }
