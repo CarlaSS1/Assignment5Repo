@@ -24,7 +24,7 @@ namespace Problem2
         /// Gets or sets the Cpu board
         /// </summary>
         /// <value>The Cpu board</value>
-        public Cpu CpuBoard { get; }
+        public Cpu CpuBoard { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the motherboard

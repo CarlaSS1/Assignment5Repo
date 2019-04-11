@@ -13,19 +13,26 @@ using System.Text;
 namespace Problem2.Parts
 {
     /// <summary>
-    /// Represents an interface for a Computer.
+    /// Represents an interface for a motherboard.
     /// </summary>
-    public interface IMotherboard<out T> where T : Computer
+    public interface IMotherboard<out T> where T : Motherboard
     {
         // Add
         IMotherboard<T> AddHardDrive(HardDrive hardDrive);
+
+        IMotherboard<T> AddMemory(Memory memory);
+
+        IMotherboard<T> AddGraphicCard(GraphicsCard graphicsCard);
+
+        IMotherboard<T> AddCpu(Cpu processor);
 
         T Build();
 
         // sets - Might have to make another interface, oh my god. WHy.
 
-        IMotherboard<T> SetCase(Case caseName);
-
         IMotherboard<T> SetHardDriveLimit(int capacity);
+
+        IMotherboard<T> SetMotherboardName(string name);
+
     }
 }

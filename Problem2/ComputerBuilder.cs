@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Problem2.Parts;
 
 namespace Problem2
 {
@@ -27,23 +28,15 @@ namespace Problem2
             this.computer = new Computer();
         }
 
-        public IComputer<Computer> AddCase()
+        public IComputer<Computer> AddCase(Case pcCase)
         {
-            Case @case = new Case();
-
-            this.computer.PCCase = @case;
-            return null;
+            this.computer.PCCase = pcCase;
+            return this;
         }
 
-        public IComputer<Computer> AddHardDrive(HardDrive hardDrive)
+        public IComputer<Computer> AddMotherboard(IMotherboard<Motherboard> motherboard)
         {
-            // Would this go against the law of demeter?
-            if(this.computer.GetMotherboard.HardDriveLimit != 0)
-            {
-                
-            }
-
-            return null;
+            throw new NotImplementedException();
         }
 
         public Computer Build()
@@ -57,18 +50,6 @@ namespace Problem2
         {
             this.computer.Name = name;
             return this;
-        }
-
-        // Validation Methods - Unique to the Computer Builder
-
-        public bool VerifyCpuSpeed<T>(double speed) where T : Cpu
-        {
-            if(speed <= 0)
-            {
-                // TO DO - Create an error message or something.
-            } 
-
-            return false;
         }
 
         
