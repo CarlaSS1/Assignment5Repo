@@ -23,7 +23,7 @@ Subject Stuff:
 -Using a stack that can only hold 5
 	->The stack contains the order of bidders (Keeps track of how many pushes)
 	->1. Pop off the 5th added bidder to get highest bidder
-	->2. Pop off the last bidder added if > 5
+	->2. Pop off the last bidder added if = 5
 
 -Using a list to contain all bidders
 	->Notify all bidders of updated price

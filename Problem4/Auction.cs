@@ -8,6 +8,9 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 
 namespace Problem4
 {
@@ -16,81 +19,79 @@ namespace Problem4
     /// </summary>
     public class Auction
     {
-        abstract class Subject
-        {
+        public class Subject
+	    {
+		    private readonly List<Bidder> listOfBidders;
+            private readonly Stack<Bidder> bidderStack;
 
-            private List<Observer> _observers = new List<Observer>();
+		    public Subject()
+		    {
+			    // maintain a list of observers
+			    this.listOfBidders = new List<Bidder>();
+                // maintain a stack of bidders
+                this.bidderStack = new Stack<Bidder>();
+		    }
+            
+            /// <summary>
+            ///  
+            /// </summary>
+            /// <param name="observer"></param>
+		    public void AddObserver(Bidder observer)
+		    {
+			    // only add the observer
+			    // if there is no observer already added with the given name
+			    if (this.listOfBidders.All(c => c.Name != observer.Name))
+			    {
+				    this.listOfBidders.Add(observer);
+			    }
+		    }
 
-            public void Attach(Observer observer)
-            {
-                _observers.Add(observer);
-            }
+		    public void RemoveObserver(string name)
+		    {
+			    // remove all the observers from the list
+			    // where the name of the observer matches the name provided
+			    this.listOfBidders.RemoveAll(c => c.Name == name);
+		    }
 
-            public void Detach(Observer observer)
-            {
-                _observers.Remove(observer);
-            }
+		    public void NotifyAll()
+		    {
+			    // for each observer, invoke the notify method
+			    // on the given observer
+			    foreach (var simpleObserver in this.listOfBidders)
+			    {
+				    simpleObserver.Notify();
+			    }
+		    }
+	    }
+       
 
-            public void Notify()
-            {
-                foreach (Observer o in _observers)
-                {
-                    o.Update();
-                }
-            }
-        }
+	    public class BidderNumberOne : Bidder
+	    {
+		    public BidderNumberOne(string name, double amountToBid, double bid, bool hasWon) : base(name, amountToBid, bid, hasWon)
+		    {
 
-        class ConcreteSubject : Subject
+		    }
 
-        {
-            private string _subjectState;
+		    public override void Notify()
+		    {
+			    // called when the notify method on the super class observer is called
+			    Console.WriteLine("I am observer A");
+		    }
+	    }
 
-            // Gets or sets subject state
+	    public class BidderNumberTwo : Bidder
+	    {
+		    public BidderNumberTwo(string name, double amountToBid, double bid, bool hasWon) : base(name, amountToBid, bid, hasWon)
+		    {
 
-            public string SubjectState
-            {
-                get { return _subjectState; }
-                set { _subjectState = value; }
-            }
-        }
+		    }
 
-        abstract class Observer
-
-        {
-            public abstract void Update();
-        }
-
-        class ConcreteObserver : Observer
-
-        {
-            private string _name;
-            private string _observerState;
-            private ConcreteSubject _subject;
-
-            // Constructor
-
-            public ConcreteObserver(
-              ConcreteSubject subject, string name)
-            {
-                this._subject = subject;
-                this._name = name;
-            }
-
-            public override void Update()
-            {
-                _observerState = _subject.SubjectState;
-                Console.WriteLine("Observer {0}'s new state is {1}",
-                  _name, _observerState);
-            }
-
-            // Gets or sets subject
-
-            public ConcreteSubject Subject
-            {
-                get { return _subject; }
-                set { _subject = value; }
-            }
-        }
+		    public override void Notify()
+		    {
+			    // called when the notify method on the super class observer is called
+			    Console.WriteLine("I am observer B");
+		    }
+	    }    
     }
 }
 
