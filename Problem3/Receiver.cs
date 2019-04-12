@@ -7,8 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Problem3
 {
@@ -29,11 +27,19 @@ namespace Problem3
         /// <value>The address.</value>
         public string Address { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Receiver"/> class.
+        /// </summary>
         public Receiver()
         {
 
         }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Receiver"/> class.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="address"></param>
         public Receiver(string name, string address)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));
