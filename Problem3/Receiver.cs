@@ -38,8 +38,8 @@ namespace Problem3
         /// <summary>
         /// Initializes a new instance of <see cref="Receiver"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="address"></param>
+        /// <param name="name">The name.</param>
+        /// <param name="address">The Address.</param>
         public Receiver(string name, string address)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));
