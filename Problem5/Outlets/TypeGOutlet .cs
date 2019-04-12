@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Problem5.Plugs
+﻿namespace Problem5.Plugs
 {
+    /// <summary>
+    /// Represent a type g outlet.
+    /// </summary>
     class TypeGOutlet : Outlet
     {
+        /// <summary>
+        /// Initializes a new instance of <see cref="TypeGOutlet"/> class.
+        /// </summary>
         public TypeGOutlet()
         {
             this.Type = OutletType.G;

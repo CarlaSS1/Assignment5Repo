@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Problem5.Plugs
+﻿namespace Problem5.Plugs
 {
+    /// <summary>
+    /// Represents a type a outlet
+    /// </summary>
     class TypeAOutlet : Outlet
     {
+        /// <summary>
+        /// Initializes a new instance of <see cref="TypeAOutlet"/> class.
+        /// </summary>
         public TypeAOutlet()
         {
             this.Type = OutletType.A;

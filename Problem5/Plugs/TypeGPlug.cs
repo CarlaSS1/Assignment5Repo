@@ -1,11 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Problem5.Plugs
 {
+    /// <summary>
+    /// Represents a type g plug
+    /// </summary>
     class TypeGPlug : Plug
     {
+        /// <summary>
+        /// Initializes a new instance of <see cref="TypeGPlug"/> class.
+        /// </summary>
         public TypeGPlug()
         {
             this.Type = PlugType.G;
@@ -19,20 +23,27 @@ namespace Problem5.Plugs
             this.IsPolarized = true;
         }
 
+        /// <summary>
+        /// Connects outlet to type g plug
+        /// </summary>
+        /// <param name="outlet">The outlet.</param>
         public override void Connect(Outlet outlet)
         {
             try
             {
+                // Check if the outlet type is correct
                 if (outlet.Type == OutletType.G)
                 {
                     this.IsConnected = true;
                 }
                 else
                 {
+                    // Instantiate a plug adapter of type g for the outlet.
                     var adapter = new PlugAdapter();
 
                     var adaptedOutlet = adapter.Adapt<TypeGOutlet>(outlet);
 
+                    // Connects the outlet to the adapter.
                     this.Connect(adaptedOutlet);
                 }
             }
@@ -42,6 +53,9 @@ namespace Problem5.Plugs
             }
         }
 
+        /// <summary>
+        /// Disconnects the outlet from type g plug.
+        /// </summary>
         public override void Disconnect()
         {
             this.IsConnected = false;

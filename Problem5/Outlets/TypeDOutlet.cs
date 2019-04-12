@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Problem5.Plugs
+﻿namespace Problem5.Plugs
 {
+    /// <summary>
+    /// Represents a type d outlet.
+    /// </summary>
     class TypeDOutlet : Outlet
     {
+        /// <summary>
+        /// Initializes a new instance of <see cref="TypeDOutlet"/> class.
+        /// </summary>
         public TypeDOutlet()
         {
             this.Type = OutletType.D;

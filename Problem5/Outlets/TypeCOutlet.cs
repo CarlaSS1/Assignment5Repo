@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Problem5.Plugs
+﻿namespace Problem5.Plugs
 {
+    /// <summary>
+    /// Represents a type c outlet.
+    /// </summary>
     class TypeCOutlet : Outlet
     {
+        /// <summary>
+        /// Initializes a new instance of <see cref="TypeCOutlet"/> class.
+        /// </summary>
         public TypeCOutlet()
         {
             this.Type = OutletType.C;

@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Problem5.Plugs
+﻿namespace Problem5.Plugs
 {
+    /// <summary>
+    /// Represents a type h outlet
+    /// </summary>
     class TypeHOutlet : Outlet
     {
+        /// <summary>
+        /// Initializes a new instance of <see cref="TypeHOutlet"/> class.
+        /// </summary>
         public TypeHOutlet()
         {
             this.Type = OutletType.H;

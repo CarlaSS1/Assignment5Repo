@@ -17,9 +17,7 @@ namespace Problem5.Plugs
         /// <summary>
         /// Initializes a new instance of <see cref="PlugAdapter"/> class.
         /// </summary>
-        public PlugAdapter()
-        {
-        }
+        public PlugAdapter() {}
 
         /// <summary>
         /// Returns an adapted of type Outlet
@@ -32,7 +30,11 @@ namespace Problem5.Plugs
             return (T)Adapt( outlet );
         }
         
-        // TO DO - Document the remaining stuff here,.
+        /// <summary>
+        /// Tranverse expression tree to check for adapter type of an outlet
+        /// </summary>
+        /// <param name="outlet">The outlet</param>
+        /// <returns>A instance of type for an outlet.</returns>
         public object Adapt( Outlet outlet )
         {
             switch ( outlet )
