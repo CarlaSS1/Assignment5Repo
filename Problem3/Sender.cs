@@ -17,15 +17,31 @@ namespace Problem3
     /// </summary>
     public class Sender
     {
+        /// <summary>
+        /// Gets or sets the name of sender.
+        /// </summary>
+        /// <value>The name.</value>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets the address of a sender.
+        /// </summary>
+        /// <value>The address.</value>
         public string Address { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Sender"/> class.
+        /// </summary>
         public Sender()
         {
 
         }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Sender"/> class.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <param name="address">The address.</param>
         public Sender(string name, string address)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));

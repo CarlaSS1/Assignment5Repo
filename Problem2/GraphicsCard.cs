@@ -18,12 +18,6 @@ namespace Problem2
     public class GraphicsCard
     {
         /// <summary>
-        /// Gets or sets the name of a graphics card
-        /// </summary>
-        /// <value>Graphics card name</value>
-        public string Name { get; set; }
-
-        /// <summary>
         /// Gets or sets Fan count
         /// </summary>
         /// <value>The Fan Count.</value>
@@ -55,14 +49,12 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="GraphicsCard"/> class.
         /// </summary>
-        /// <param name="name">Graphics Card name</param>
         /// <param name="fanCount">The fan count.</param>
         /// <param name="speed">The speed.</param>
         /// <param name="videoMemory">The video memory.</param>
         /// <param name="cUDACores">The CUDA cores</param>
         public GraphicsCard(string name, int fanCount, double speed, double videoMemory, int cUDACores)
         {
-            Name = name ?? throw new ArgumentNullException(nameof(name));
             FanCount = fanCount;
             Speed = speed;
             VideoMemory = videoMemory;

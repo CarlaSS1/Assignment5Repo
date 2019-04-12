@@ -7,8 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Problem3
 {
@@ -17,15 +15,31 @@ namespace Problem3
     /// </summary>
     public class Receiver
     {
+        /// <summary>
+        /// Gets or sets the name of the receiver
+        /// </summary>
+        /// <value>The name.</value>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets receiver Address
+        /// </summary>
+        /// <value>The address.</value>
         public string Address { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Receiver"/> class.
+        /// </summary>
         public Receiver()
         {
 
         }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Receiver"/> class.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="address"></param>
         public Receiver(string name, string address)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));

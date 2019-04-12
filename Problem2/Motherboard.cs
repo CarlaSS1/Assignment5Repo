@@ -8,7 +8,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Problem2
 {
@@ -17,6 +16,21 @@ namespace Problem2
     /// </summary>
     public class Motherboard
     {
+        // Using it for reference purposes
+        private readonly Computer computer;
+
+        /// <summary>
+        /// Gets or sets the Cpu board
+        /// </summary>
+        /// <value>The Cpu board</value>
+        public Cpu CpuBoard { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the motherboard
+        /// </summary>
+        /// <value>THe Name.</value>
+        public string Name { get; set; }
+
         /// <summary>
         /// Gets or sets form factor
         /// </summary>
@@ -54,10 +68,10 @@ namespace Problem2
         public List<HardDrive> HardDrives { get; set; }
 
         /// <summary>
-        /// Gets or sets 1 to many memories
+        /// Gets or sets 1 to many memories sticks
         /// </summary>
-        /// <value>A list of memories</value>
-        public List<Memory> Memories { get; set; }
+        /// <value>A list of memory sticks</value>
+        public List<Memory> MemorySticks { get; set; }
 
         /// <summary>
         /// Gets or sets 1 to 1 graphics card
@@ -73,40 +87,27 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="Motherboard"/> class.
         /// </summary>
+        /// <param name="name">The name</param>
         /// <param name="formFactor">The form factor.</param>
         /// <param name="powerConsumption">The power consumption.</param>
         /// <param name="hardDriveLimit">The hard drive limit.</param>
-        /// <param name="memorySlots">The memory slots.</param>
-        /// <param name="pCISlots">The PCI slots.</param>
-        public Motherboard(string formFactor, double powerConsumption, int hardDriveLimit, int memorySlots, int pCISlots)
-        {
-            FormFactor = formFactor ?? throw new ArgumentNullException(nameof(formFactor));
-            PowerConsumption = powerConsumption;
-            HardDriveLimit = hardDriveLimit;
-            MemorySlots = memorySlots;
-            PCISlots = pCISlots;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of <see cref="Motherboard"/> class.
-        /// </summary>
-        /// <param name="formFactor">The form factor.</param>
-        /// <param name="powerConsumption">The power consumption.</param>
-        /// <param name="hardDriveLimit">The hard drive limit.</param>
+        /// <param name="cpuBoard">The Cpu board.</param>
         /// <param name="memorySlots">The memory slots.</param>
         /// <param name="pCISlots">The PCI slots.</param>
         /// <param name="hardDrives">List of hard drives.</param>
-        /// <param name="memories">A list of memories.</param>
+        /// <param name="memorySticks">A list of memory sticks.</param>
         /// <param name="graphicCard">The graphics card.</param>
-        public Motherboard(string formFactor, double powerConsumption, int hardDriveLimit, int memorySlots, int pCISlots, List<HardDrive> hardDrives, List<Memory> memories, GraphicsCard graphicCard)
+        public Motherboard(string name, string formFactor, double powerConsumption, int hardDriveLimit, Cpu cpuBoard, int memorySlots, int pCISlots, List<HardDrive> hardDrives, List<Memory> memorySticks, GraphicsCard graphicCard)
         {
+            Name = name ?? throw new ArgumentNullException(nameof(name));
             FormFactor = formFactor ?? throw new ArgumentNullException(nameof(formFactor));
             PowerConsumption = powerConsumption;
             HardDriveLimit = hardDriveLimit;
+            CpuBoard = cpuBoard;
             MemorySlots = memorySlots;
             PCISlots = pCISlots;
             HardDrives = hardDrives ?? throw new ArgumentNullException(nameof(hardDrives));
-            Memories = memories ?? throw new ArgumentNullException(nameof(memories));
+            MemorySticks = memorySticks ?? throw new ArgumentNullException(nameof(memorySticks));
             GraphicCard = graphicCard ?? throw new ArgumentNullException(nameof(graphicCard));
         }
     }

@@ -7,8 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Problem2
 {
@@ -29,19 +27,6 @@ namespace Problem2
     public class Cpu
     {
         /// <summary>
-        /// Gets or Sets a motherboard
-        /// </summary>
-        /// <value>The Motherboard</value>
-        /// 
-        /// <remarks>
-        /// Cpu is a part of a mother board.
-        /// I called it board since I don't want to cause a confusion with the naming.
-        /// Or cause errors because of the Motherboard variable being called the exact
-        /// same as motherboard class.
-        /// </remarks>
-        public Motherboard Board { get; set; }
-
-        /// <summary>
         /// Gets or sets the name of a cpu.
         /// </summary>
         /// <value>Cpu name.</value>
@@ -57,10 +42,13 @@ namespace Problem2
         /// Gets or sets Manufacturer
         /// </summary>
         /// <value>CPU Manufacturer</value>
-        public CpuManufacturer Manufacturer { get; set; }
+        public CpuManufacturer Manufacturer { get; }
 
-        // Look up specific conditions as to what defines as a Socket Type
-        public CpuSocketTypes SocketType { get; set; }
+        /// <summary>
+        /// Gets the SocketType
+        /// </summary>
+        /// <value>The Socket type for a Cpu.</value>
+        public CpuSocketTypes SocketType { get; }
 
         /// <summary>
         /// Gets or sets Cache size
@@ -83,16 +71,14 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="Cpu"/> class.
         /// </summary>
-        /// <param name="board">Motherboard</param>
         /// <param name="name">Cpu Name.</param>
         /// <param name="speed">Cpu Speed.</param>
         /// <param name="manufacturer">Cpu Manufacturer</param>
         /// <param name="socketType">The Socket type</param>
         /// <param name="cacheSize">The Cache Size.</param>
         /// <param name="numberOfCores">The number of cores.</param>
-        public Cpu(Motherboard board, string name, double speed, CpuManufacturer manufacturer, CpuSocketTypes socketType, int cacheSize, int numberOfCores)
+        public Cpu(string name, double speed, CpuManufacturer manufacturer, CpuSocketTypes socketType, int cacheSize, int numberOfCores)
         {
-            Board = board ?? throw new ArgumentNullException(nameof(board));
             Name = name ?? throw new ArgumentNullException(nameof(name));
             Speed = speed;
             Manufacturer = manufacturer;
