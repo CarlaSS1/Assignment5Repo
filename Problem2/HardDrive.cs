@@ -7,8 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Problem2
 {
@@ -22,8 +20,10 @@ namespace Problem2
     /// </summary>
     public class HardDrive
     {
+        // Mainains the read speed of the hard drive
         private double readSpeed;
 
+        // Maintains the write speed of the hard drive
         private double writeSpeed;
 
         /// <summary>
@@ -95,10 +95,6 @@ namespace Problem2
             ReadSpeed = readSpeed;
             WriteSpeed = writeSpeed;
         }
-
-        
-
-
     }
 }
 

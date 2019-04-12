@@ -7,8 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Problem2
 {
@@ -28,19 +26,6 @@ namespace Problem2
     /// </summary>
     public class Cpu
     {
-        /// <summary>
-        /// Sets a motherboard
-        /// </summary>
-        /// <value>The Motherboard</value>
-        /// 
-        /// <remarks>
-        /// Cpu is a part of a mother board.
-        /// I called it board since I don't want to cause a confusion with the naming.
-        /// Or cause errors because of the Motherboard variable being called the exact
-        /// same as motherboard class.
-        /// </remarks>
-        private Motherboard GetMotherboard;
-
         /// <summary>
         /// Gets or sets the name of a cpu.
         /// </summary>

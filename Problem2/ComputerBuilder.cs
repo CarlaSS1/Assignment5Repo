@@ -6,9 +6,6 @@
  * Date: April 3, 2019
  */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Problem2.Parts;
 
 namespace Problem2
@@ -18,7 +15,11 @@ namespace Problem2
     /// </summary>
     public class ComputerBuilder : IComputer<Computer>
     {
+        // Maintians the current computer object
         private readonly Computer computer;
+
+        // Maintains the motherboard object
+        public IMotherboard<Motherboard> motherboard;
 
         /// <summary>
         /// Initializes a new instance of <see cref="ComputerBuilder"/> class.
@@ -28,17 +29,36 @@ namespace Problem2
             this.computer = new Computer();
         }
 
+        /// <summary>
+        /// Adds a new PC case to the computer
+        /// </summary>
+        /// <param name="pcCase">The PC case.</param>
+        /// <returns>Computer with a new pc case</returns>
         public IComputer<Computer> AddCase(Case pcCase)
         {
             this.computer.PCCase = pcCase;
             return this;
         }
 
-        public IComputer<Computer> AddMotherboard(IMotherboard<Motherboard> motherboard)
+        /// <summary>
+        /// Adds a new motherboard to the computer
+        /// </summary>
+        /// <param name="motherboard">The motherboard</param>
+        /// <returns>Computer with a new motherboard</returns>
+        public IComputer<Computer> AddMotherboard(Motherboard motherboard)
         {
-            throw new NotImplementedException();
+            var board = this.motherboard;
+
+            board = (IMotherboard<Motherboard>)motherboard;
+            
+            this.computer.Board = this.motherboard.Build();
+            return this;
         }
 
+        /// <summary>
+        /// Builds the new Computer object
+        /// </summary>
+        /// <returns>A computer</returns>
         public Computer Build()
         {
             return this.computer;
@@ -46,6 +66,11 @@ namespace Problem2
 
         // Inferace implementation
 
+        /// <summary>
+        /// Sets a name of the PC
+        /// </summary>
+        /// <param name="name">The name</param>
+        /// <returns>Computer with a name.</returns>
         public IComputer<Computer> SetPCName(string name)
         {
             this.computer.Name = name;

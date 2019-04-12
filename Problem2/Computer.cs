@@ -28,10 +28,10 @@ namespace Problem2
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets the motherboard
+        /// Gets or sets the motherboard
         /// </summary>
         /// <value>The Motherboard</value>
-        public Motherboard GetMotherboard { get; }
+        public Motherboard Board { get; set; }
 
         /// <summary>
         /// Gets the case
