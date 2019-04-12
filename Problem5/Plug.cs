@@ -1,12 +1,10 @@
 ﻿/*
- * I, Steven Thompson, student number [studentid], certify that all code submitted is my own work; 
+ * I, Steven Thompson, student number 000736020, certify that all code submitted is my own work; 
  * that I have not copied it from any other source. I also certify that I have not allowed my work to 
  * be copied by others.
  * 
- * Date: Date you created the class.
+ * Date: April 11, 2019
  */
-
-using System;
 
 namespace Problem5
 {
