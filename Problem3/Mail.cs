@@ -30,6 +30,24 @@ namespace Problem3
         public double PostalCost { get; set; }
 
         /// <summary>
+        /// Gets or sets flagged mail
+        /// </summary>
+        /// <value>Flagged mail</value>
+        public bool IsFlagged { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Sender info
+        /// </summary>
+        /// <value>The Sender information</value>
+        public Sender SenderInfo { get; set; }
+
+        /// <summary>
+        /// Gets or sets the receiver information
+        /// </summary>
+        /// <value>The receiver information</value>
+        public Receiver ReceiverInfo { get; set; }
+
+        /// <summary>
         /// Initializes a new instance of <see cref="Mail"/> class
         /// </summary>
         public Mail()
