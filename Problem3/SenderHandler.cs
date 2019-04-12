@@ -10,7 +10,7 @@ using System;
 
 namespace Problem3
 {
-    public class SenderHandler : MailHandler
+    public class SenderHandler : MailReactor
     {
         public SenderHandler()
         {

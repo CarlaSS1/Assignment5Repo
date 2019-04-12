@@ -10,7 +10,7 @@ using System;
 
 namespace Problem3
 {
-    public class ReceiverHandler : MailHandler
+    public class ReceiverHandler : MailReactor
     {
 
         public override Mail Mail => throw new NotImplementedException();

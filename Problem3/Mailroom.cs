@@ -17,7 +17,7 @@ namespace Problem3
     /// </summary>
     public class Mailroom
     {
-        private List<MailHandler> mailHandlers = new List<MailHandler>();
+        private List<MailReactor> mailHandlers = new List<MailReactor>();
 
         private List<Mail> mails = new List<Mail>();
 
@@ -26,10 +26,10 @@ namespace Problem3
         public Mailroom()
         {
             this.mailHandlers.AddRange(typeof(Mailroom).Assembly.DefinedTypes
-                                                                .Where(c => c == typeof(MailHandler) 
+                                                                .Where(c => c == typeof(MailReactor) 
                                                                 && !c.IsAbstract 
                                                                 && c.IsClass)
-                                                                .Select(t => (MailHandler)Activator.CreateInstance(t)));
+                                                                .Select(t => (MailReactor)Activator.CreateInstance(t)));
         }
 
         public void Handle(Mail mail)
