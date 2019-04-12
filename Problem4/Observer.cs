@@ -14,16 +14,16 @@ public abstract class Bidder
         this.Name = name;
         this.Bid = bid;
         this.HasWon = hasWon;
-        this.amountToBid = amountToBid;
+        this.AmountToBid = amountToBid;
     }
 
     // the name allows us to provide a unique way of identifying
     // the observer
-    public string Name { get; }
+    public string Name { get; set; }
 
     public double Bid { get; set; }
 
-    public double amountToBid { get; set; }
+    public double AmountToBid { get; set; }
 
     public bool HasWon { get; set; }
 

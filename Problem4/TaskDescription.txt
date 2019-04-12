@@ -1,6 +1,9 @@
 ﻿Problem 4 
 ----------
-Implement a series of classes to represent an auction. At an auction, there is an auctioneer who announces items for auction, prices for items being sold, 
+Implement a series of classes to represent an auction. 
+At an auction, 
+there is an auctioneer who announces 
+items for auction, prices for items being sold, 
 and when the bidding for a given item is closed the auctioneer announces the highest bidder. 
 
 During the process of the auction bidders can declare their amount which they would like to bid for a given item to the auctioneer. 
