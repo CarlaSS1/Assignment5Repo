@@ -30,6 +30,8 @@ namespace Problem4
 			    this.listOfBidders = new List<Bidder>();
                 // maintain a stack of bidders
                 this.bidderStack = new Stack<Bidder>();
+
+
 		    }
             
             /// <summary>
@@ -44,6 +46,7 @@ namespace Problem4
 			    {
 				    this.listOfBidders.Add(observer);
 			    }
+
 		    }
 
 		    public void RemoveObserver(string name)
@@ -53,45 +56,58 @@ namespace Problem4
 			    this.listOfBidders.RemoveAll(c => c.Name == name);
 		    }
 
-		    public void NotifyAll()
+		    public void NotifyAll(Bidder bidderInfo)
 		    {
 			    // for each observer, invoke the notify method
 			    // on the given observer
-			    foreach (var simpleObserver in this.listOfBidders)
+			    foreach (var bidder in this.listOfBidders)
 			    {
-				    simpleObserver.Notify();
+				    bidder.Notify();
 			    }
 		    }
+
+            public void AddBidderToItem(Bidder observer)
+            {
+                //Making sure the maximum bids are less than 5
+                if(bidderStack.Count < 5)
+                {
+                    //Pushes the bidder onto the stack
+                    this.bidderStack.Push(observer);
+                    
+                    //Auctioneer announces the bidder
+                    NotifyAll(observer);
+                }
+                else
+                {
+                    
+                    var winner = this.bidderStack.Pop();
+                    NotifyAll(winner);
+                    RemoveObserver(winner.Name);
+                }
+            }
 	    }
        
 
-	    public class BidderNumberOne : Bidder
+	    public class BidderFeatures : Bidder
 	    {
-		    public BidderNumberOne(string name, double amountToBid, double bid, bool hasWon) : base(name, amountToBid, bid, hasWon)
+		    public BidderFeatures(string name, double amountToBid, double bid, bool hasWon) : base(name, amountToBid, bid, hasWon)
 		    {
-
+                
 		    }
 
 		    public override void Notify()
 		    {
-			    // called when the notify method on the super class observer is called
-			    Console.WriteLine("I am observer A");
+			    if (HasWon)
+                {
+                    Console.WriteLine("Bidder: " + Name + " is declared the winner!" + Name + "is forced to leave...");
+                }
+                else
+                {
+                    Console.WriteLine("Bidder: " + Name + " has place a bid of " + Bid + " Dollars!");
+                }
+
 		    }
 	    }
-
-	    public class BidderNumberTwo : Bidder
-	    {
-		    public BidderNumberTwo(string name, double amountToBid, double bid, bool hasWon) : base(name, amountToBid, bid, hasWon)
-		    {
-
-		    }
-
-		    public override void Notify()
-		    {
-			    // called when the notify method on the super class observer is called
-			    Console.WriteLine("I am observer B");
-		    }
-	    }    
     }
 }
 
