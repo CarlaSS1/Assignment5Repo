@@ -11,7 +11,7 @@ namespace Problem5.Plugs
     /// <summary>
     /// Represents a type a outlet
     /// </summary>
-    class TypeAOutlet : Outlet
+    public class TypeAOutlet : Outlet
     {
         /// <summary>
         /// Initializes a new instance of <see cref="TypeAOutlet"/> class.

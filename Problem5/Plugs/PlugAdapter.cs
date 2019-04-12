@@ -13,7 +13,7 @@ namespace Problem5.Plugs
     /// <summary>
     /// Represets a plug adapater that inherits from outlet
     /// </summary>
-    class PlugAdapter : Outlet
+    public class PlugAdapter : Outlet
     {
         /// <summary>
         /// Outlet that is derived from outlet class.

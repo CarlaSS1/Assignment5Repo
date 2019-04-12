@@ -13,6 +13,8 @@ using Problem3;
 using Problem4;
 using Problem5;
 using System;
+using Problem5.Plugs;
+using System.Linq;
 
 namespace Assignment5UnitTests
 {
@@ -22,8 +24,11 @@ namespace Assignment5UnitTests
     [TestClass]
     public class Assignment5UnitTest
     {
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
-        public void Test_For_Problem_1()
+        public void Car_ValidCarWith5Wheels_NumberOfWheelsAreSetTo5()
         {
             // Arrange
             Car car = new Car(Guid.NewGuid(), 5.00, "Red mustang", "Donut", "Mattel", 1999, 16, 10, 0.50, true);
@@ -41,20 +46,36 @@ namespace Assignment5UnitTests
         public void Test_For_Problem_2()
         {
             // Arrange
+            ComputerBuilder computerBuilder = new ComputerBuilder();
 
             // Act
+            Case myCase = new Case(15, 15, 15, 2, 2);
+            computerBuilder.AddCase(myCase);
+            var builder = computerBuilder.Build();
 
             // Assert
+            Assert.AreEqual(builder.PCCase, myCase);
         }
 
         [TestMethod]
-        public void Test_For_Problem_3()
+        public void Handle_WhenFlaggedMailIsSent_AddFlaggedMailIntoTheList()
         {
             // Arrange
+            Worker worker = new Worker();
+
+            MailDispatcher mailReactor = new MailDispatcher();
+
+            Sender sender = new Sender("Chungus", "123 Example Street");
+
+            Receiver receiver = new Receiver("Carla", "149 Folkstone ave");
+
+            Mail mail1 = new Mail(0.1, 12.0, true, sender, receiver);
 
             // Act
+            mailReactor.Handle(mail1);
 
             // Assert
+            Assert.AreEqual(worker.FlaggedMails.Count(), 1);
         }
 
         [TestMethod]
@@ -68,13 +89,18 @@ namespace Assignment5UnitTests
         }
 
         [TestMethod]
-        public void Test_For_Problem_5()
+        public void ProngCount_ValidTypeAOutlet_ValueProngCountForTypeAOutlet()
         {
             // Arrange
+            PlugAdapter plugAdapter = new PlugAdapter();
+
+            TypeAOutlet outlet = new TypeAOutlet();
 
             // Act
+            plugAdapter.Adapt(outlet);
 
             // Assert
+            Assert.AreEqual(outlet.ProngCount, 2);
         }
 
         // Add additional test cases here
