@@ -6,10 +6,6 @@
  * Date: April 11, 2019
  */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Problem3
 {
     /// <summary>
@@ -22,7 +18,7 @@ namespace Problem3
         /// </summary>
         protected MailHandler() {}
 
-        public abstract Mail GetMail { get; }
+        public abstract Mail Mail { get; }
 
         public abstract void Handle(Mail mail);
     }

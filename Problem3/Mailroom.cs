@@ -17,20 +17,36 @@ namespace Problem3
     /// </summary>
     public class Mailroom
     {
-        private List<MailHandler> handleMails = new List<MailHandler>();
+        private List<MailHandler> mailHandlers = new List<MailHandler>();
+
+        private List<Mail> mails = new List<Mail>();
+
+        public List<Mail> FlaggedMails { get; set; }
 
         public Mailroom()
         {
-            this.handleMails.AddRange(typeof(Mailroom).Assembly.DefinedTypes
+            this.mailHandlers.AddRange(typeof(Mailroom).Assembly.DefinedTypes
                                                                 .Where(c => c == typeof(MailHandler) 
                                                                 && !c.IsAbstract 
                                                                 && c.IsClass)
                                                                 .Select(t => (MailHandler)Activator.CreateInstance(t)));
         }
 
-        public void Handle(Queue<Mail> flaggedMail)
+        public void Handle(Mail mail)
         {
-            var handler = this.handleMails.FirstOrDefault(c => c.)
+            if(!mail.IsFlagged)
+            {
+                var handler = this.mailHandlers.FirstOrDefault(c => c.Mailbox == mail.SenderInfo.Name);
+
+                handler.Handle(mail);
+            }
+            else
+            {
+                Console.WriteLine("Placed flagged mail into the review queue");
+                this.FlaggedMails.Add(mail);
+            }
+
+            
         }
     }
 }

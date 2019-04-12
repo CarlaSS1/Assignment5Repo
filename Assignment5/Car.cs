@@ -7,8 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Assignment5
 {
@@ -64,7 +62,7 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight.</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
-        public Car(Guid id, Mdouble cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
+        public Car(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
         }
 
@@ -72,14 +70,14 @@ namespace Assignment5
         /// Race the toy car.
         /// </summary>
         public void RaceToyCar(){
-            Console.Writeline("The toy car has been raced.");
+            Console.WriteLine("The toy car has been raced.");
 
         }
         /// <summary>
         /// Open the toy car door.
         /// </summary>
         public void OpenToyCarDoor(){
-            Console.Writeline("The toy car door has been opened.");
+            Console.WriteLine("The toy car door has been opened.");
 
         }
     }

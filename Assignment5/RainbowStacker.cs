@@ -8,7 +8,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Assignment5
 {
@@ -72,14 +71,14 @@ namespace Assignment5
         /// Stack the rings.
         /// </summary>
         public void StackRings(){
-            Console.Writeline("The rings have been stacked.");
+            Console.WriteLine("The rings have been stacked.");
             }
 
         /// <summary>
         /// Unstack the rings.
         /// </summary>
         public void UnstackRings(){
-            Console.Writeline("The rings have been unstacked.");
+            Console.WriteLine("The rings have been unstacked.");
             }
     }
 }

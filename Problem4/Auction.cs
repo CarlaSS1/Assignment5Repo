@@ -21,9 +21,19 @@ namespace Problem4
     {
         public class Subject
 	    {
+            // Maintains a list of bidders
 		    private readonly List<Bidder> listOfBidders;
+
+            // Maintains a stack of bidders
             private readonly Stack<Bidder> bidderStack;
 
+            /// <summary>
+            /// Initializes a new instance of <see cref="Subject"/> class
+            /// </summary>
+            /// 
+            /// <remarks>
+            /// Also instantitates a list and stack of bidders
+            /// </remarks>
 		    public Subject()
 		    {
 			    // maintain a list of observers
@@ -36,7 +46,7 @@ namespace Problem4
             /// <summary>
             ///  Adds an observer to the list of bidders
             /// </summary>
-            /// <param name="observer"></param>
+            /// <param name="observer">The observer</param>
 		    public void AddObserver(Bidder observer)
 		    {
 			    // only add the observer
@@ -49,6 +59,10 @@ namespace Problem4
 
 		    }
 
+            /// <summary>
+            /// Removes all bidders from the auction
+            /// </summary>
+            /// <param name="name">The name</param>
 		    public void RemoveObserver(string name)
 		    {
 			    // remove all the observers from the list
@@ -59,7 +73,7 @@ namespace Problem4
             /// <summary>
             /// This notify is for the announcement of bidder on an item
             /// </summary>
-            /// <param name="bidderInfo"></param>
+            /// <param name="bidderInfo">Bidder information</param>
 		    public void NotifyAll(Bidder bidderInfo)
 		    {
 			    // for each observer, invoke the notify method
@@ -73,7 +87,7 @@ namespace Problem4
             /// <summary>
             ///  This notify is for the announcement of item
             /// </summary>
-            /// <param name="itemInfo"></param>
+            /// <param name="itemInfo">Item information</param>
             public void NotifyAll(Item itemInfo)
             {
                 // for each observer, invoke the notify method
@@ -85,9 +99,9 @@ namespace Problem4
             }
 
             /// <summary>
-            /// 
+            /// Adds bidder into the stack
             /// </summary>
-            /// <param name="observer"></param>
+            /// <param name="observer">The observer</param>
             public void AddBidderToItem(Bidder observer)
             {
                 //Making sure the maximum bids are less than 5
@@ -141,11 +155,21 @@ namespace Problem4
         /// </summary>
 	    public class BidderFeatures : Bidder
 	    {
+            /// <summary>
+            /// Initializes a new instance of <see cref="BidderFeatures"/> class.
+            /// </summary>
+            /// <param name="name">The name.</param>
+            /// <param name="amountToBid">The amount to bid.</param>
+            /// <param name="bid">The bid amount.</param>
+            /// <param name="hasWon">Flag for winner of the bid</param>
 		    public BidderFeatures(string name, double amountToBid, double bid, bool hasWon) : base(name, amountToBid, bid, hasWon)
 		    {
                 
 		    }
 
+            /// <summary>
+            /// Notifies the bidder whether they won or has placed a bid for an item.
+            /// </summary>
 		    public override void Notify()
 		    {
 			    if (HasWon)
@@ -159,13 +183,26 @@ namespace Problem4
 		    }
 	    }
 
+        /// <summary>
+        /// Represents features for an item being aunctioned
+        /// </summary>
         public class ItemFeatures : Item
         {
+            /// <summary>
+            /// Initializes a new instance of <see cref="ItemFeatures"/> class.
+            /// </summary>
+            /// <param name="name">The name.</param>
+            /// <param name="price">The price.</param>
+            /// <param name="yearOfCreation">The year of creation.</param>
+            /// <param name="isNew">Flag if the item is new or not.</param>
             public ItemFeatures(string name, double price, DateTimeOffset yearOfCreation, bool isNew) : base(name, price, yearOfCreation, isNew)
             {
 
             }
 
+            /// <summary>
+            /// Notifies everyone of a new item for auction.
+            /// </summary>
             public override void Notify()
             {
                 if (IsNew)

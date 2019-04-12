@@ -1,8 +1,8 @@
 ﻿Implement a series of classes to represent mailroom organization. Mail in a mailroom is continuously received and does not stop, these can be considered requests. 
 When mail arrives in the mailroom, the dispatcher dispatches the mail to the appropriate worker and the workers run independently of the dispatcher to perform the following actions 
 
-1.	Determine which mailbox to place the mail 
-2.	If the mail is marked as flagged, place the mail into a review queue 
+1.	Determine which mailbox to place the mail (done?)
+2.	If the mail is marked as flagged, place the mail into a review queue (Done)
 3.	Return to the dispatcher to receive more mail 
 
 A piece of mail consists of the following: 

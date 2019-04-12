@@ -16,9 +16,6 @@ namespace Problem2
     /// </summary>
     public class Motherboard
     {
-        // Using it for reference purposes
-        private readonly Computer computer;
-
         /// <summary>
         /// Gets or sets the Cpu board
         /// </summary>

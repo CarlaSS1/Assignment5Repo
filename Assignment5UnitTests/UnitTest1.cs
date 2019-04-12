@@ -7,6 +7,7 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Problem3;
 
 namespace Assignment5UnitTests
 {

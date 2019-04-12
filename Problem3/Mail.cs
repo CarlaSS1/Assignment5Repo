@@ -7,8 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Problem3
 {
@@ -50,11 +48,16 @@ namespace Problem3
         /// <summary>
         /// Initializes a new instance of <see cref="Mail"/> class
         /// </summary>
-        public Mail()
+        public Mail() {}
+
+        public Mail(double weight, double postalCost, bool isFlagged, Sender senderInfo, Receiver receiverInfo)
         {
-
+            Weight = weight;
+            PostalCost = postalCost;
+            IsFlagged = isFlagged;
+            SenderInfo = senderInfo ?? throw new ArgumentNullException(nameof(senderInfo));
+            ReceiverInfo = receiverInfo ?? throw new ArgumentNullException(nameof(receiverInfo));
         }
-
     }
 }
 
