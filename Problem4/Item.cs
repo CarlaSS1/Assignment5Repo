@@ -1,6 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/*
+ * I, Andrew Panko, student number [000394436], certify that all code submitted is my own work; 
+ * that I have not copied it from any other source. I also certify that I have not allowed my work to 
+ * be copied by others.
+ * 
+ * Date: April 4th, 2019.
+ */
+
+using System;
 
 namespace Problem4
 {

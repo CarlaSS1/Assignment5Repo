@@ -1,5 +1,5 @@
 ﻿/*
- * I, Kevin Tran, student number [studentid], certify that all code submitted is my own work; 
+ * I, Kevin Tran, student number 000375580, certify that all code submitted is my own work; 
  * that I have not copied it from any other source. I also certify that I have not allowed my work to 
  * be copied by others.
  * 
@@ -36,9 +36,10 @@ namespace Problem3
         {
             if(!mail.IsFlagged)
             {
-                var handler = this.mailHandlers.FirstOrDefault(c => c.Mailbox == mail.SenderInfo.Name);
+                // Get first handler
+                //var handler = this.mailHandlers.FirstOrDefault(c => c.Mail == mail.SenderInfo.Name);
 
-                handler.Handle(mail);
+                //handler.Handle(mail);
             }
             else
             {
