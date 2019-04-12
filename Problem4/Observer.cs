@@ -9,7 +9,7 @@ public abstract class Bidder
     /// <param name="bid"></param>
     /// <param name="amountToBid"></param>
     /// <param name="hasWon"></param>
-    protected Bidder(string name, double bid, double amountToBid, bool hasWon)
+    public Bidder(string name, double bid, double amountToBid, bool hasWon)
     {
         this.Name = name;
         this.Bid = bid;
