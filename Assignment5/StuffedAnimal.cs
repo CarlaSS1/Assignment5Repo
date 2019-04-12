@@ -1,5 +1,5 @@
 ﻿/*
- * I, Riley Hancox, student number [studentid], certify that all code submitted is my own work; 
+ * I, Riley Hancox, student number 000397119, certify that all code submitted is my own work; 
  * that I have not copied it from any other source. I also certify that I have not allowed my work to 
  * be copied by others.
  * 
