@@ -6,10 +6,6 @@
  * Date: April 1, 2019
  */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Problem2
 {
     /// <summary>
@@ -22,12 +18,6 @@ namespace Problem2
     /// </summary>
     public class Memory
     {
-        /// <summary>
-        /// Gets or sets the motherboard
-        /// </summary>
-        /// <value>The mother board.</value>
-        public Motherboard Board { get; set; }
-
         // May have a variable that validates the read speed
         // May convert it into a string.
         public int ReadSpeed { get; set; }
@@ -56,14 +46,12 @@ namespace Problem2
         /// <summary>
         /// Initializes a new instance of <see cref="Memory"/> class.
         /// </summary>
-        /// <param name="board">The motherboard.</param>
         /// <param name="readSpeed">The read speed.</param>
         /// <param name="writeSpeed">The write speed.</param>
         /// <param name="typeMemory">The Memory type.</param>
         /// <param name="capacity">The capacity.</param>
-        public Memory(Motherboard board, int readSpeed, int writeSpeed, MemoryType typeMemory, double capacity)
+        public Memory(int readSpeed, int writeSpeed, MemoryType typeMemory, double capacity)
         {
-            Board = board;
             ReadSpeed = readSpeed;
             WriteSpeed = writeSpeed;
             TypeMemory = typeMemory;
