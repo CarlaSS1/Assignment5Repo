@@ -12,7 +12,7 @@ namespace Problem3
 {
     public class ReceiverHandler : MailHandler
     {
-
+        public readonly MailHandler mailHandler = new MailHandler();
         public override Mail Mail => throw new NotImplementedException();
 
         public override void Handle(Mail mail)

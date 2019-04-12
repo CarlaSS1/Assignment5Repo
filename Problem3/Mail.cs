@@ -50,6 +50,14 @@ namespace Problem3
         /// </summary>
         public Mail() {}
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="Mail"/> class.
+        /// </summary>
+        /// <param name="weight">The Weight</param>
+        /// <param name="postalCost">The postal cost.</param>
+        /// <param name="isFlagged">Status if the mail is flagged or not.</param>
+        /// <param name="senderInfo">Sender Information</param>
+        /// <param name="receiverInfo">Receiver Information</param>
         public Mail(double weight, double postalCost, bool isFlagged, Sender senderInfo, Receiver receiverInfo)
         {
             Weight = weight;
