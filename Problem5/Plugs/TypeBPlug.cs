@@ -13,7 +13,7 @@ namespace Problem5.Plugs
     /// <summary>
     /// Represents type b plug
     /// </summary>
-    class TypeBPlug : Plug
+    public class TypeBPlug : Plug
     {
         /// <summary>
         /// Initinalizes a new instance of <see cref="TypeBPlug"/> class.

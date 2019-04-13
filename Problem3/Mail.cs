@@ -10,6 +10,12 @@ using System;
 
 namespace Problem3
 {
+
+    public enum MyEnum
+    {
+        Letter,
+        Package
+    }
     /// <summary>
     /// Represent a mail from a mailroom
     /// </summary>

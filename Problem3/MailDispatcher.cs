@@ -37,23 +37,24 @@ namespace Problem3
                 workers.Add(new Worker());
             }
             
-			this.handlers.AddRange(typeof(MailDispatcher).Assembly.DefinedTypes.Where(c => c == typeof(Handler)
+			this.handlers.AddRange(typeof(MailDispatcher).Assembly.DefinedTypes.Where(c => c == typeof(MailHandler)
 																			&& !c.IsAbstract
 																			&& c.IsClass)
-			                                      .Select(t => (Handler)Activator.CreateInstance(t)));
+			                                      .Select(t => (MailHandler)Activator.CreateInstance(t)));
 		}
 
         public void Handle(Mail resource)
 		{
-			// find the first handler
-			var handler = this.handlers.FirstOrDefault(c => c.Mail.r);
+      
+            // find the first handler
+            var handler = this.handlers.FirstOrDefault();
 
-			if (handler == null)
-			{
-				throw new InvalidOperationException("Unable to locate handler for resource");
-			}
+            if (handler == null)
+            {
+                throw new InvalidOperationException("Unable to locate handler for resource");
+            }
 
-			handler.Handle(resource);
+            handler.Handle(resource);
 		}
 
         public MailDispatcher(List<Mail> mails)

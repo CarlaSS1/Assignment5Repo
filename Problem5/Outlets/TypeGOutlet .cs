@@ -11,7 +11,7 @@ namespace Problem5.Plugs
     /// <summary>
     /// Represent a type g outlet.
     /// </summary>
-    class TypeGOutlet : Outlet
+    public class TypeGOutlet : Outlet
     {
         /// <summary>
         /// Initializes a new instance of <see cref="TypeGOutlet"/> class.
