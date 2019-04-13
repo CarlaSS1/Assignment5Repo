@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Problem3
 {
-    class MailHandler : Handler
+    public class MailHandler : Handler
     {
         public MailHandler()
         {
 
         }
 
-        public override string Mail => "Mail";
+        public override Mail Mail => null;
 
         public override void Handle(Mail resource)
         {

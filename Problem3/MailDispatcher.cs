@@ -15,17 +15,29 @@ namespace Problem3
     /// <summary>
     /// Represents an abstract mail handler.
     /// </summary>
-    public abstract class MailReactor
+    public class MailDispatcher
     {
         private List<Handler> handlers = new List<Handler>();
 
-        /// <summary>
-        /// Initiailizes a new instance of <see cref="MailReactor"/> class.
-        /// </summary>
-		public MailReactor()
-		{
+        public List<Worker> workers = new List<Worker>();
 
-			this.handlers.AddRange(typeof(MailReactor).Assembly.DefinedTypes.Where(c => c == typeof(Handler)
+        public List<Mail> Mails { get; set; }
+
+        public int Capacity { get; set; }
+
+        /// <summary>
+        /// Initiailizes a new instance of <see cref="MailDispatcher"/> class.
+        /// </summary>
+		public MailDispatcher()
+		{
+            if(Capacity >= 5)
+            {
+                workers.Capacity += 1;
+
+                workers.Add(new Worker());
+            }
+            
+			this.handlers.AddRange(typeof(MailDispatcher).Assembly.DefinedTypes.Where(c => c == typeof(Handler)
 																			&& !c.IsAbstract
 																			&& c.IsClass)
 			                                      .Select(t => (Handler)Activator.CreateInstance(t)));
@@ -34,7 +46,7 @@ namespace Problem3
         public void Handle(Mail resource)
 		{
 			// find the first handler
-			var handler = this.handlers.FirstOrDefault(c => c.Mail == resource.ReceiverInfo.Name);
+			var handler = this.handlers.FirstOrDefault(c => c.Mail.r);
 
 			if (handler == null)
 			{
@@ -43,5 +55,10 @@ namespace Problem3
 
 			handler.Handle(resource);
 		}
+
+        public MailDispatcher(List<Mail> mails)
+        {
+            Mails = mails ?? throw new ArgumentNullException(nameof(mails));
+        }
     }
 }

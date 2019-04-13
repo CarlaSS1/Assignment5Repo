@@ -13,7 +13,7 @@ namespace Problem3
 
         // we defined our resource as abstract
         // so that all derived handler will define the resource they handle
-        public abstract string Mail { get; }
+        public abstract Mail Mail { get; }
 
         // define an abstract handle method
         // to be implemented by all derived handlers

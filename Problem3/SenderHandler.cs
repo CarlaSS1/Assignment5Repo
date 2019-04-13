@@ -10,16 +10,16 @@ using System;
 
 namespace Problem3
 {
-    public class SenderHandler : MailReactor
+    public class SenderHandler : Handler
     {
         public SenderHandler()
         {
 
         }
 
-        public override Mail Mail => throw new NotImplementedException();
+        public override string Mail => "Mail";
 
-        public override void Handle(Mail mail)
+        public override void Handle(Mail resource)
         {
             throw new NotImplementedException();
         }
