@@ -9,8 +9,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Problem4
 {
@@ -19,6 +17,9 @@ namespace Problem4
     /// </summary>
     public class Auction
     {
+        /// <summary>
+        /// Represents a subject of the auction.
+        /// </summary>
         public class Subject
 	    {
             // Maintains a list of bidders

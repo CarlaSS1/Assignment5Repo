@@ -63,6 +63,9 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight.</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
+        /// <param name="numberOfRooms">The number of rooms.</param>
+        /// <param name="numberOfFloors">The number of floors.</param>
+        /// <param name="furnitureCollection">The furniture collection</param>
         public Dollhouse(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard,int numberOfRooms,int numberOfFloors, List<string> furnitureCollection) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
             NumberOfRooms = numberOfRooms;
