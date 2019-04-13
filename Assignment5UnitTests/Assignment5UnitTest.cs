@@ -107,6 +107,24 @@ namespace Assignment5UnitTests
             Assert.AreEqual(outlet.ProngCount, 2);
         }
 
+        
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void AddCpu_WhenCpuSpeedIsZero_Throws()
+        {
+            // Arrange
+            MotherboardBuilder motherboardBuilder = new MotherboardBuilder();
+
+            // Act
+            Cpu processor = new Cpu("My Processor", 0.0, CpuManufacturer.AMD, CpuSocketTypes.BGA, 23, 5);
+
+            motherboardBuilder.AddCpu(processor);
+
+            motherboardBuilder.Build();
+
+            // Assert - Expected Exception.
+        }
+
         // Add additional test cases here
         // Also, please be sure to note down what you are
         // trying to test for.
