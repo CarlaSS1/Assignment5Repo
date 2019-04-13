@@ -30,10 +30,7 @@ namespace Problem3
         /// <summary>
         /// Initializes a new instance of <see cref="Receiver"/> class.
         /// </summary>
-        public Receiver()
-        {
-
-        }
+        public Receiver() {}
 
         /// <summary>
         /// Initializes a new instance of <see cref="Receiver"/> class.

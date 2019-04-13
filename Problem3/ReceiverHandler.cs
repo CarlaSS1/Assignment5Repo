@@ -10,21 +10,23 @@ using System;
 
 namespace Problem3
 {
+    /// <summary>
+    /// Represents handler for receiver mail
+    /// </summary>
     public class ReceiverHandler : Handler
     {
-        public ReceiverHandler()
-        {
-            
-        }
+        /// <summary>
+        /// Initializes a new instance of <see cref="ReceiverHandler"/> class.
+        /// </summary>
+        public ReceiverHandler() {}
+        
+        public override string Mail => "Mail";
 
-        public override string Mail => "owo";
-
-        public override void Handle(Mail resource)
-        {
-            AddToMailBox();
-        }
-
-        public void AddToMailBox()
+        /// <summary>
+        /// Handles receiver mail. 
+        /// </summary>
+        /// <param name="mail">The mail.</param>
+        public override void Handle(Mail mail)
         {
             Console.WriteLine($"Sent Mail into the Receiver Mailbox.");
         }

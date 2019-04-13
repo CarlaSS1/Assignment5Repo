@@ -10,8 +10,10 @@ using System;
 
 namespace Problem3
 {
-
-    public enum MyEnum
+    /// <summary>
+    /// Stores the types of mails.
+    /// </summary>
+    public enum MailType
     {
         Letter,
         Package
@@ -31,7 +33,7 @@ namespace Problem3
         /// Gets or sets the type of the mail
         /// </summary>
         /// <value>Weight of the mail</value>
-        public string MailType { get; set; }
+        public MailType MailType { get; set; }
 
         /// <summary>
         /// Gets or sets the postal cost
