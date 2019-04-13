@@ -22,12 +22,6 @@ namespace Problem3
         public double Weight { get; set; }
 
         /// <summary>
-        /// Gets or sets the type of the mail
-        /// </summary>
-        /// <value>Weight of the mail</value>
-        public string MailType { get; set; }
-
-        /// <summary>
         /// Gets or sets the postal cost
         /// </summary>
         /// <value>The postal code</value>
@@ -74,3 +68,5 @@ namespace Problem3
         }
     }
 }
+
+// You can ignore priority. That's not important to the assignment.
