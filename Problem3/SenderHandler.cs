@@ -10,18 +10,28 @@ using System;
 
 namespace Problem3
 {
+    /// <summary>
+    /// Represents a handle for sender mail
+    /// </summary>
     public class SenderHandler : Handler
     {
-        public SenderHandler()
+        /// <summary>
+        /// Initializes a new instance of <see cref="SenderHandler"/> class.
+        /// </summary>
+        public SenderHandler() {}
+
+        /// <summary>
+        /// Set the Mail
+        /// </summary>
+        public override string Mail => "Mail";
+
+        /// <summary>
+        /// Handles the sender mail
+        /// </summary>
+        /// <param name="mail">The mail.</param>
+        public override void Handle(Mail mail)
         {
-
-        }
-
-        public override string Mail => null;
-
-        public override void Handle(Mail resource)
-        {
-            throw new NotImplementedException();
+            Console.WriteLine($"Sent Mail into the Sender Mailbox.");
         }
     }
 }
