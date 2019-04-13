@@ -23,10 +23,10 @@ namespace Assignment5UnitTests
     public class Assignment5UnitTest
     {
         /// <summary>
-        /// Tests that the Number of wheels on the car are three.
+        /// Tests that the Number of wheels on the car are Four .
         /// </summary>
         [TestMethod]
-        public void NumberOfWheels_ValidCarWithThreeWheels_NumberOfWheelsAreSetToThree()
+        public void NumberOfWheels_ValidCarWithFourWheels_NumberOfWheelsAreSetToFour()
         {
             // Arrange
             Car car = new Car(Guid.NewGuid(), 5.00, "Red Car", "Donut", "Mattel", 1999, 16, 10, 0.50, true, model: "Ford", make: "Some make", wheels: 4);
@@ -34,7 +34,7 @@ namespace Assignment5UnitTests
             // Act - Values have been set in arrange phase
 
             // Assert
-            Assert.AreEqual(car.NumberOfWheels, 3);
+            Assert.AreEqual(car.NumberOfWheels, 4);
         }
 
         /// <summary>
