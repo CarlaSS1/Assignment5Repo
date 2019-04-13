@@ -14,14 +14,19 @@ namespace Problem3
     {
         public ReceiverHandler()
         {
-
+            
         }
 
-        public override string Mail => "Receiver";
+        public override string Mail => "owo";
 
         public override void Handle(Mail resource)
         {
-            throw new NotImplementedException();
+            AddToMailBox();
+        }
+
+        public void AddToMailBox()
+        {
+            Console.WriteLine($"Sent Mail into the Receiver Mailbox.");
         }
     }
 }

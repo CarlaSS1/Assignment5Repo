@@ -45,15 +45,20 @@ namespace Problem3
 
         public void Handle(Mail resource)
 		{
-			// find the first handler
-			var handler = this.handlers.FirstOrDefault(c => c.Mail.r);
+            if (!resource.IsFlagged)
+            {
+                
+            }
 
-			if (handler == null)
-			{
-				throw new InvalidOperationException("Unable to locate handler for resource");
-			}
+            // find the first handler
+            var handler = this.handlers.FirstOrDefault();
 
-			handler.Handle(resource);
+            if (handler == null)
+            {
+                throw new InvalidOperationException("Unable to locate handler for resource");
+            }
+
+            handler.Handle(resource);
 		}
 
         public MailDispatcher(List<Mail> mails)

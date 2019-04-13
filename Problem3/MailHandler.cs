@@ -11,7 +11,7 @@ namespace Problem3
 
         }
 
-        public override Mail Mail => null;
+        public override string Mail => "Mail";
 
         public override void Handle(Mail resource)
         {

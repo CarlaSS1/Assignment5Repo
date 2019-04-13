@@ -5,7 +5,7 @@ namespace Problem3
 {
     public class Mailroom
     {
-        public List<Mail> Mails { get; }
+        public List<Mail> Mails { get; set; }
 
         private readonly MailDispatcher dispatcher;
 

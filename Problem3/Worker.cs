@@ -55,11 +55,11 @@ namespace Problem3
             
         }
 
-        public Mail GetMail()
-        {
+        //public Mail GetMail()
+        //{
 
-            return mails;
-        }
+        //    return mails;
+        //}
 
         public void IsFull()
         {

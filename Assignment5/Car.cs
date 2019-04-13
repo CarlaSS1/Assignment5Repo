@@ -70,6 +70,10 @@ namespace Assignment5
                  
         }
 
+        public Car(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
+        {
+        }
+
         /// <summary>
         /// Race the toy car.
         /// </summary>
