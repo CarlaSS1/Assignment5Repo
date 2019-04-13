@@ -17,7 +17,9 @@ namespace Problem3
 
         }
 
-        public override string Mail => "Receiver";
+      //  public override string Mail => "Receiver";
+
+        public override Mail Mail => throw new NotImplementedException();
 
         public override void Handle(Mail resource)
         {

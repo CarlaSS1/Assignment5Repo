@@ -32,7 +32,7 @@ namespace Assignment5
         /// Gets or sets the number of wheels.
         /// </summary>
         /// <value>The number of wheels of the toy car.</value>
-        public int NumberOfWheels { get; set; }
+        public int? NumberOfWheels { get; set; }
    
         /// <summary>
         /// Initializes a new instance of <see cref="Car"/> class.
@@ -62,7 +62,7 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight.</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
-        public Car(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard, string model, string make, int wheels) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
+        public Car(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard, string model = null, string make =null, int? wheels = null) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
             Model = model;
             Make = make;

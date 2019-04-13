@@ -20,13 +20,13 @@ namespace Assignment5
         /// Gets or sets the number of rooms.
         /// </summary>
         /// <value>The the number of rooms.</value>
-        public int NumberOfRooms { get; set; }
+        public int? NumberOfRooms { get; set; }
 
         /// <summary>
         /// Gets or sets the number of floors.
         /// </summary>
         /// <value>The the number of floors.</value>
-        public int NumberOfFloors { get; set; }
+        public int? NumberOfFloors { get; set; }
 
         /// <summary>
         /// Gets or sets the list of furniture.
@@ -63,7 +63,7 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight.</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
-        public Dollhouse(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard,int numberOfRooms,int numberOfFloors, List<string> furnitureCollection) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
+        public Dollhouse(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard,int? numberOfRooms = null,int? numberOfFloors = null, List<string> furnitureCollection = null) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
             NumberOfRooms = numberOfRooms;
             NumberOfFloors = numberOfFloors;

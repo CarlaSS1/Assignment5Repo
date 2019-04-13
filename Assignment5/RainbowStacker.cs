@@ -21,7 +21,7 @@ namespace Assignment5
         /// Gets or sets the ring count
         /// </summary>
         /// <value>The ring count</value>
-        public int RingCount { get; set; }
+        public int? RingCount { get; set; }
 
         /// <summary>
         /// Gets or sets the ring shape.
@@ -63,7 +63,7 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight.</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
-        public RainbowStacker(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard, int ringCount, string ringShape, List<string> colourCollection) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
+        public RainbowStacker(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard, int? ringCount = null, string ringShape = null, List<string> colourCollection = null) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
             RingCount = ringCount;
             RingShape = ringShape;

@@ -25,13 +25,13 @@ namespace Assignment5UnitTests
     public class Assignment5UnitTest
     {
         /// <summary>
-        /// 
+        /// Tests the creation of a car in problem 1.
         /// </summary>
         [TestMethod]
         public void Car_ValidCarWith5Wheels_NumberOfWheelsAreSetTo5()
         {
             // Arrange
-            Car car = new Car(Guid.NewGuid(), 5.00, "Red mustang", "Donut", "Mattel", 1999, 16, 10, 0.50, true);
+            Car car = new Car(Guid.NewGuid(), 5.00, "Hot Wheels", "Donut", "Mattel", 1999, 16, 10, 0.50, true);
 
             // Act
             car.Model = "Some model";
@@ -42,6 +42,20 @@ namespace Assignment5UnitTests
             Assert.AreEqual(car.NumberOfWheels, 5);
         }
 
+        /// <summary>
+        /// Tests the creation of a car in problem 1 with the value of null passed for name.
+        /// </summary>
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Null_Toy_Test()
+        {
+            // Arrange
+            Car car = new Car(Guid.NewGuid(), 5.00, null, "Donut", "Mattel", 1999, 16, 10, 0.50, true);
+        }
+
+        /// <summary>
+        /// Tests the adding of a case in problem 2.
+        /// </summary>
         [TestMethod]
         public void Test_For_Problem_2()
         {
@@ -57,37 +71,9 @@ namespace Assignment5UnitTests
             Assert.AreEqual(builder.PCCase, myCase);
         }
 
-        [TestMethod]
-        public void Handle_WhenFlaggedMailIsSent_AddFlaggedMailIntoTheList()
-        {
-            // Arrange
-            Worker worker = new Worker();
-
-            MailDispatcher mailReactor = new MailDispatcher();
-
-            Sender sender = new Sender("Chungus", "123 Example Street");
-
-            Receiver receiver = new Receiver("Carla", "149 Folkstone ave");
-
-            Mail mail1 = new Mail(0.1, 12.0, true, sender, receiver);
-
-            // Act
-            mailReactor.Handle(mail1);
-
-            // Assert
-            Assert.AreEqual(worker.FlaggedMails.Count(), 1);
-        }
-
-        [TestMethod]
-        public void Test_For_Problem_4()
-        {
-            // Arrange
-
-            // Act
-
-            // Assert
-        }
-
+        /// <summary>
+        /// Tests a plug adapter and outlet in problem 5.
+        /// </summary>
         [TestMethod]
         public void ProngCount_ValidTypeAOutlet_ValueProngCountForTypeAOutlet()
         {
@@ -102,9 +88,5 @@ namespace Assignment5UnitTests
             // Assert
             Assert.AreEqual(outlet.ProngCount, 2);
         }
-
-        // Add additional test cases here
-        // Also, please be sure to note down what you are
-        // trying to test for.
     }
 }

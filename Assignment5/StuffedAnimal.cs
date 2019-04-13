@@ -61,7 +61,7 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
-        public StuffedAnimal(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard, string animalType, string stuffingType, string stitchingType) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
+        public StuffedAnimal(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard, string animalType = null, string stuffingType = null, string stitchingType = null) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
             StitchingType = stitchingType;
             AnimalType = animalType;

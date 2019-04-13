@@ -76,11 +76,4 @@ namespace Problem5
             
         }
     }
-
-
 }
-
-// Research is required.
-// I found this, it might be useful: https://github.com/kamranahmedse/design-patterns-for-humans
-
-// The Adapter pattern was used.

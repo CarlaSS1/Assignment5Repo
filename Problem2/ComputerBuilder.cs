@@ -76,7 +76,5 @@ namespace Problem2
             this.computer.Name = name;
             return this;
         }
-
-        
     }
 }
