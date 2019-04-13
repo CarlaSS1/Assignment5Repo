@@ -18,6 +18,6 @@ namespace Problem3
         // define an abstract handle method
         // to be implemented by all derived handlers
         // the parameter, is the resource to handle
-        public abstract void Handle(Mail resource);
+        public abstract void Handle(Mail mail);
     }
 }

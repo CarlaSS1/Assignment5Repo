@@ -37,19 +37,15 @@ namespace Problem3
                 workers.Add(new Worker());
             }
             
-			this.handlers.AddRange(typeof(MailDispatcher).Assembly.DefinedTypes.Where(c => c == typeof(Handler)
+			this.handlers.AddRange(typeof(MailDispatcher).Assembly.DefinedTypes.Where(c => c == typeof(MailHandler)
 																			&& !c.IsAbstract
 																			&& c.IsClass)
-			                                      .Select(t => (Handler)Activator.CreateInstance(t)));
+			                                      .Select(t => (MailHandler)Activator.CreateInstance(t)));
 		}
 
         public void Handle(Mail resource)
 		{
-            if (!resource.IsFlagged)
-            {
-                
-            }
-
+      
             // find the first handler
             var handler = this.handlers.FirstOrDefault();
 

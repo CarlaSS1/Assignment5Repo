@@ -57,31 +57,7 @@ namespace Assignment5UnitTests
             Assert.AreEqual(builder.PCCase, myCase);
         }
 
-        [TestMethod]
-        public void Handle_WhenFlaggedMailIsSent_AddFlaggedMailIntoTheList()
-        {
-            // Arrange
-            //Worker worker = new Worker();
-
-            //MailDispatcher mailReactor = new MailDispatcher();
-
-            //Sender sender = new Sender("Chungus", "123 Example Street");
-
-            //Receiver receiver = new Receiver("Carla", "149 Folkstone ave");
-
-            //Mail mail1 = new Mail(0.1, 12.0, true, sender, receiver);
-
-            //// Act
-            //mailReactor.Handle(mail1);
-
-            //// Assert
-            //Assert.AreEqual(worker.FlaggedMails.Count(), 1);
-
-
-
-            var x = typeof(MailDispatcher).Assembly.DefinedTypes.Where(c => c == typeof(MailHandler));
-        }
-
+       
         [TestMethod]
         public void Test_For_Problem_4()
         {
