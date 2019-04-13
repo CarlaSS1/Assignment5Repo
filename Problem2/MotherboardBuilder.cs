@@ -29,7 +29,7 @@ namespace Problem2
         public IMotherboard<Motherboard> AddCpu(Cpu processor)
         {
             // Is the processor null
-            if (processor != null)
+            if (processor == null)
             {
                 throw new ArgumentNullException($"{nameof(processor)} cannot be null");
             }
@@ -56,8 +56,6 @@ namespace Problem2
             {
                 throw new ArgumentNullException($"{nameof(GraphicsCard)} cannot be null");
             }
-
-            // TO DO - VALIDATION
 
             this.motherboard.GraphicCard = graphicsCard;
             return this;

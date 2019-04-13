@@ -11,7 +11,7 @@ namespace Problem5.Plugs
     /// <summary>
     /// Represents a type b outlet.
     /// </summary>
-    class TypeBOutlet : Outlet
+    public class TypeBOutlet : Outlet
     {
         /// <summary>
         /// Initializes a new instance of <see cref="TypeBOutlet"/> class.

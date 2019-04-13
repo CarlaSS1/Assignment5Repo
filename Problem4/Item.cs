@@ -10,6 +10,9 @@ using System;
 
 namespace Problem4
 {
+    /// <summary>
+    /// Represents an abstract item to be put into auction
+    /// </summary>
     public abstract class Item
     {
         /// <summary>

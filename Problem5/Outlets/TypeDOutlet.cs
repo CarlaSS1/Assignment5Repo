@@ -11,7 +11,7 @@ namespace Problem5.Plugs
     /// <summary>
     /// Represents a type d outlet.
     /// </summary>
-    class TypeDOutlet : Outlet
+    public class TypeDOutlet : Outlet
     {
         /// <summary>
         /// Initializes a new instance of <see cref="TypeDOutlet"/> class.
