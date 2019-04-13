@@ -37,18 +37,14 @@ namespace Assignment5
         /// <summary>
         /// Initializes a new instance of <see cref="Car"/> class.
         /// </summary>
-        public Car()
-        {
-        }
+        public Car() {}
 
         /// <summary>
         /// Initializes a new instance of <see cref="Car"/> class.
         /// </summary>
         /// <param name="id">Global Unique ID</param>
-        public Car(Guid id) : base(id)
-        {
-        }
-        
+        public Car(Guid id) : base(id) {}
+
         /// <summary>
         /// Initializes a new instance of <see cref="Car"/> class.
         /// </summary>
@@ -62,25 +58,29 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight.</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
+        /// <param name="model">The model</param>
+        /// <param name="make">The make.</param>
+        /// <param name="wheels">The wheels.</param>
         public Car(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard, string model = null, string make =null, int? wheels = null) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
             Model = model;
             Make = make;
             NumberOfWheels = wheels;
-                 
         }
 
         /// <summary>
         /// Race the toy car.
         /// </summary>
-        public void RaceToyCar(){
+        public void RaceToyCar()
+        {
             Console.WriteLine("The toy car has been raced.");
-
         }
+
         /// <summary>
         /// Open the toy car door.
         /// </summary>
-        public void OpenToyCarDoor(){
+        public void OpenToyCarDoor()
+        {
             Console.WriteLine("The toy car door has been opened.");
 
         }

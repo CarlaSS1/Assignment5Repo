@@ -37,18 +37,13 @@ namespace Assignment5
         /// <summary>
         /// Initializes a new instance of <see cref="Dollhouse"/> class.
         /// </summary>
-        public Dollhouse()
-        {
-        }
-
-
+        public Dollhouse() {}
+        
         /// <summary>
         /// Initializes a new instance of <see cref="Dollhouse"/> class.
         /// </summary>
         /// <param name="id">Global Unique ID</param>
-        public Dollhouse(Guid id) : base(id)
-        {
-        }
+        public Dollhouse(Guid id) : base(id) {}
 
         /// <summary>
         /// Initalizes a new instance of <see cref="Dollhouse"/> class.
@@ -63,6 +58,9 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight.</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
+        /// <param name="numberOfRooms">The number of rooms.</param>
+        /// <param name="numberOfFloors">The number of floors.</param>
+        /// <param name="furnitureCollection">The furniture collection.</param>
         public Dollhouse(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard,int? numberOfRooms = null,int? numberOfFloors = null, List<string> furnitureCollection = null) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
             NumberOfRooms = numberOfRooms;
@@ -73,13 +71,16 @@ namespace Assignment5
         /// <summary>
         /// Open the doll house.
         /// </summary>
-        public void OpenDollHouse(){
+        public void OpenDollHouse()
+        {
             Console.WriteLine("The doll house is opened.");
         }        
+
         /// <summary>
         /// Close the doll house.
         /// </summary>
-        public void CloseDollHouse(){
+        public void CloseDollHouse()
+        {
             Console.WriteLine("The doll house is closed.");
         }
     }

@@ -38,17 +38,13 @@ namespace Assignment5
         /// <summary>
         /// Initializes a new instance of <see cref="RainbowStacker"/> class.
         /// </summary>
-        public RainbowStacker()
-        {
-        }
+        public RainbowStacker() {}
 
         /// <summary>
         /// Initializes a new instance of <see cref="RainbowStacker"/> class.
         /// </summary>
         /// <param name="id">Global Unique ID.</param>
-        public RainbowStacker(Guid id) : base(id)
-        {
-        }
+        public RainbowStacker(Guid id) : base(id) {}
 
         /// <summary>
         /// Initalizes a new instance of <see cref="RainbowStacker"/> class.
@@ -63,6 +59,9 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight.</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
+        /// <param name="ringCount">The ring count</param>
+        /// <param name="ringShape">The ring shape.</param>
+        /// <param name="colourCollection">The colour collection</param>
         public RainbowStacker(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard, int? ringCount = null, string ringShape = null, List<string> colourCollection = null) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
             RingCount = ringCount;
@@ -73,15 +72,17 @@ namespace Assignment5
         /// <summary>
         /// Stack the rings.
         /// </summary>
-        public void StackRings(){
+        public void StackRings()
+        {
             Console.WriteLine("The rings have been stacked.");
-            }
+        }
 
         /// <summary>
         /// Unstack the rings.
         /// </summary>
-        public void UnstackRings(){
+        public void UnstackRings()
+        {
             Console.WriteLine("The rings have been unstacked.");
-            }
+        }
     }
 }

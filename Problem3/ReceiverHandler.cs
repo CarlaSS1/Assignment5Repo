@@ -20,6 +20,9 @@ namespace Problem3
         /// </summary>
         public ReceiverHandler() {}
         
+        /// <summary>
+        /// Sets the mail
+        /// </summary>
         public override string Mail => "Mail";
 
         /// <summary>

@@ -1,23 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/*
+ * I, Kevin Tran, student number 000375580, certify that all code submitted is my own work; 
+ * that I have not copied it from any other source. I also certify that I have not allowed my work to 
+ * be copied by others.
+ * 
+ * Date: April 11, 2019
+ */
 
 namespace Problem3
 {
+    /// <summary>
+    /// Represents an abstract handler
+    /// </summary>
     public abstract class Handler
     {
-        protected Handler()
-        {
+        /// <summary>
+        /// Initializes a new instance of <see cref="Handler"/> class.
+        /// </summary>
+        protected Handler() {}
 
-        }
-
-        // we defined our resource as abstract
-        // so that all derived handler will define the resource they handle
+        /// <summary>
+        /// Gets a mail
+        /// </summary>
         public abstract string Mail { get; }
-
-        // define an abstract handle method
-        // to be implemented by all derived handlers
-        // the parameter, is the resource to handle
+        
+        /// <summary>
+        /// Handles a mail for a handler.
+        /// </summary>
+        /// <param name="mail">The mail</param>
         public abstract void Handle(Mail mail);
     }
 }

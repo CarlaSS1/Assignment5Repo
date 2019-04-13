@@ -17,21 +17,32 @@ namespace Problem3
     /// </summary>
     public class MailDispatcher
     {
+        // Holds a list of handlers
         private List<Handler> handlers = new List<Handler>();
 
+        // Holds a list of workers
         public List<Worker> workers = new List<Worker>();
 
+        /// <summary>
+        /// Gets or sets a list of mails
+        /// </summary>
+        /// <value>A list of mails</value>
         public List<Mail> Mails { get; set; }
 
-        public int Capacity { get; set; }
+        /// <summary>
+        /// Gets or sets the capacity of workers.
+        /// </summary>
+        public int WorkerCapacity { get; set; }
 
         /// <summary>
         /// Initiailizes a new instance of <see cref="MailDispatcher"/> class.
         /// </summary>
 		public MailDispatcher()
 		{
-            if(Capacity >= 5)
+            // Check if the worker capacity is greater than 5
+            if(workers.Count() >= WorkerCapacity)
             {
+                // Increase the worker capacity
                 workers.Capacity += 1;
 
                 workers.Add(new Worker());
@@ -43,20 +54,10 @@ namespace Problem3
 			                                      .Select(t => (MailHandler)Activator.CreateInstance(t)));
 		}
 
-        public void Handle(Mail resource)
-		{
-      
-            // find the first handler
-            var handler = this.handlers.FirstOrDefault();
-
-            if (handler == null)
-            {
-                throw new InvalidOperationException("Unable to locate handler for resource");
-            }
-
-            handler.Handle(resource);
-		}
-
+        /// <summary>
+        /// Initializes a new instance of <see cref="MailDispatcher"/> class.
+        /// </summary>
+        /// <param name="mails">A List of mails</param>
         public MailDispatcher(List<Mail> mails)
         {
             Mails = mails ?? throw new ArgumentNullException(nameof(mails));

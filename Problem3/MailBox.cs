@@ -10,10 +10,8 @@ using System;
 
 namespace Problem3
 {
-
-
     /// <summary>
-    /// Represent a mail from a mailroom
+    /// Represent a mail box
     /// </summary>
     public class MailBox
     {
@@ -25,9 +23,9 @@ namespace Problem3
         public Receiver ReceiverInfo { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="T:Problem3.MailBox"/> has received.
+        /// Gets or sets a value indicating whether this <see cref="MailBox"/> has received.
         /// </summary>
-        /// <value><c>true</c> if has received; otherwise, <c>false</c>.</value>
+        /// <value>Whether or the user has received the mail</value>
         public bool HasReceived { get; set; }
 
         /// <summary>
@@ -36,13 +34,9 @@ namespace Problem3
         public MailBox() { }
 
         /// <summary>
-        /// Initializes a new instance of <see cref="MailBox"/> class.
+        /// Initialinzes a new instance of <see cref="MailBox"/> class.
         /// </summary>
-        /// <param name="weight">The Weight</param>
-        /// <param name="postalCost">The postal cost.</param>
-        /// <param name="isFlagged">Status if the mail is flagged or not.</param>
-        /// <param name="senderInfo">Sender Information</param>
-        /// <param name="receiverInfo">Receiver Information</param>
+        /// <param name="receiverInfo">The receiver information.</param>
         public MailBox( Receiver receiverInfo)
         {
             ReceiverInfo = receiverInfo ?? throw new ArgumentNullException(nameof(receiverInfo));

@@ -10,11 +10,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Assignment5;
 using Problem2;
 using Problem3;
-using Problem4;
-using Problem5;
 using System;
 using Problem5.Plugs;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace Assignment5UnitTests
 {
@@ -25,25 +23,25 @@ namespace Assignment5UnitTests
     public class Assignment5UnitTest
     {
         /// <summary>
-        /// 
+        /// Tests that the Number of wheels on the car are three.
         /// </summary>
         [TestMethod]
-        public void Car_ValidCarWith5Wheels_NumberOfWheelsAreSetTo5()
+        public void NumberOfWheels_ValidCarWithThreeWheels_NumberOfWheelsAreSetToThree()
         {
             // Arrange
-            Car car = new Car(Guid.NewGuid(), 5.00, "Red mustang", "Donut", "Mattel", 1999, 16, 10, 0.50, true);
+            Car car = new Car(Guid.NewGuid(), 5.00, "Red Car", "Donut", "Mattel", 1999, 16, 10, 0.50, true, model: "Ford", make: "Some make", wheels: 4);
 
-            // Act
-            car.Model = "Some model";
-            car.NumberOfWheels = 5;
-            car.RaceToyCar();
+            // Act - Values have been set in arrange phase
 
             // Assert
-            Assert.AreEqual(car.NumberOfWheels, 5);
+            Assert.AreEqual(car.NumberOfWheels, 3);
         }
 
+        /// <summary>
+        /// Tests a valid case object by adding a case to a computer.
+        /// </summary>
         [TestMethod]
-        public void Test_For_Problem_2()
+        public void AddCase_ValidCase_ReturnsComputerWithACase()
         {
             // Arrange
             ComputerBuilder computerBuilder = new ComputerBuilder();
@@ -57,17 +55,29 @@ namespace Assignment5UnitTests
             Assert.AreEqual(builder.PCCase, myCase);
         }
 
-       
+        /// <summary>
+        /// Test an mail list that is set to null to the Mail Dispatcher object.
+        /// 
+        /// It should throw a new ArgumentNullException
+        /// </summary>
         [TestMethod]
-        public void Test_For_Problem_4()
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void MailDispatcher_WhenMailListIsNull_ThrowsArgumentNullException()
         {
             // Arrange
+            MailDispatcher dispatcher;
 
             // Act
+            List<Mail> mails = null;
 
-            // Assert
+            dispatcher = new MailDispatcher(null);
+            // Assert - Expected Exception
+            
         }
 
+        /// <summary>
+        /// Tests that the type a outlet has a prong count of two.
+        /// </summary>
         [TestMethod]
         public void ProngCount_ValidTypeAOutlet_ValueProngCountForTypeAOutlet()
         {
@@ -91,7 +101,7 @@ namespace Assignment5UnitTests
         /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void AddCpu_WhenCpuSpeedIsZero_Throws()
+        public void AddCpu_WhenCpuSpeedIsZero_ThrowsArgumentOutOfRangeException()
         {
             // Arrange
             MotherboardBuilder motherboardBuilder = new MotherboardBuilder();
@@ -105,9 +115,5 @@ namespace Assignment5UnitTests
 
             // Assert - Expected Exception.
         }
-
-        // Add additional test cases here
-        // Also, please be sure to note down what you are
-        // trying to test for.
     }
 }

@@ -88,8 +88,7 @@ namespace Assignment5
         /// Initializes a new instance of <see cref="Toy"/> class.
         /// </summary>
         public Toy() {}
-
-
+        
         /// <summary>
         /// Initializes a new instance of <see cref="Toy"/> class.
         /// </summary>

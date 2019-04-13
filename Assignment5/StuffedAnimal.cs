@@ -36,17 +36,13 @@ namespace Assignment5
         /// <summary>
         /// Initializes a new instance of <see cref="StuffedAnimal"/> class.
         /// </summary>
-        public StuffedAnimal()
-        {
-        }
+        public StuffedAnimal() {}
 
         /// <summary>
         /// Initializes a new instance of <see cref="StuffedAnimal"/> class.
         /// </summary>
         /// <param name="id">Global Unique ID.</param>
-        public StuffedAnimal(Guid id) : base(id)
-        {
-        }
+        public StuffedAnimal(Guid id) : base(id) {}
 
         /// <summary>
         /// Initalizes a new instance of <see cref="StuffedAnimal"/> class.
@@ -61,6 +57,9 @@ namespace Assignment5
         /// <param name="ageLimitMin">Minimum age limit.</param>
         /// <param name="weight">The weight</param>
         /// <param name="isChokingHazard">Whether the toy is a choking hazard.</param>
+        /// <param name="animalType">The animal type.</param>
+        /// <param name="stuffingType">The stuffing type.</param>
+        /// <param name="stitchingType">The stitching type</param>
         public StuffedAnimal(Guid id, double cost, string description, string name, string manufacturingCompany, int year, int ageLimitMax, int ageLimitMin, double weight, bool isChokingHazard, string animalType = null, string stuffingType = null, string stitchingType = null) : base(id, cost, description, name, manufacturingCompany, year, ageLimitMax, ageLimitMin, weight, isChokingHazard)
         {
             StitchingType = stitchingType;
@@ -71,14 +70,16 @@ namespace Assignment5
         /// <summary>
         /// Attend a tea party.
         /// </summary>
-        public void AttendTeaParty(){
+        public void AttendTeaParty()
+        {
             Console.WriteLine("The stuffed animal attended a tea party.");
         }
 
         /// <summary>
         /// Sleep in a bed.
         /// </summary>
-        public void SleepInBed(){
+        public void SleepInBed()
+        {
             Console.WriteLine("The stuffed animal slept in bed");
         }
     }

@@ -18,6 +18,7 @@ namespace Problem3
         Letter,
         Package
     }
+
     /// <summary>
     /// Represent a mail from a mailroom
     /// </summary>
@@ -32,7 +33,7 @@ namespace Problem3
         /// <summary>
         /// Gets or sets the type of the mail
         /// </summary>
-        /// <value>Weight of the mail</value>
+        /// <value>The type of the mail</value>
         public MailType MailType { get; set; }
 
         /// <summary>
@@ -69,13 +70,15 @@ namespace Problem3
         /// </summary>
         /// <param name="weight">The Weight</param>
         /// <param name="postalCost">The postal cost.</param>
-        /// <param name="isFlagged">Status if the mail is flagged or not.</param>
+        /// <param name="isFlagged">Whether or a mail is flagged.</param>
+        /// <param name="mailType">The Mail type.</param>
         /// <param name="senderInfo">Sender Information</param>
         /// <param name="receiverInfo">Receiver Information</param>
-        public Mail(double weight, double postalCost, bool isFlagged, Sender senderInfo, Receiver receiverInfo)
+        public Mail(double weight, double postalCost, MailType mailType, bool isFlagged, Sender senderInfo, Receiver receiverInfo)
         {
             Weight = weight;
             PostalCost = postalCost;
+            MailType = MailType;
             IsFlagged = isFlagged;
             SenderInfo = senderInfo ?? throw new ArgumentNullException(nameof(senderInfo));
             ReceiverInfo = receiverInfo ?? throw new ArgumentNullException(nameof(receiverInfo));

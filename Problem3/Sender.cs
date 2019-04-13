@@ -32,10 +32,7 @@ namespace Problem3
         /// <summary>
         /// Initializes a new instance of <see cref="Sender"/> class.
         /// </summary>
-        public Sender()
-        {
-
-        }
+        public Sender() {}
 
         /// <summary>
         /// Initializes a new instance of <see cref="Sender"/> class.

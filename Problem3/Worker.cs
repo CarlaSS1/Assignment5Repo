@@ -6,10 +6,6 @@
  * Date: April 1, 2019
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace Problem3
 {
     /// <summary>
