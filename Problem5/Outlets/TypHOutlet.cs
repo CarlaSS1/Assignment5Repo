@@ -11,7 +11,7 @@ namespace Problem5.Plugs
     /// <summary>
     /// Represents a type h outlet
     /// </summary>
-    class TypeHOutlet : Outlet
+    public class TypeHOutlet : Outlet
     {
         /// <summary>
         /// Initializes a new instance of <see cref="TypeHOutlet"/> class.

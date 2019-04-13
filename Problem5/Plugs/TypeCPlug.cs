@@ -13,7 +13,7 @@ namespace Problem5.Plugs
     /// <summary>
     /// Represents a type c plug
     /// </summary>
-    class TypeCPlug : Plug
+    public class TypeCPlug : Plug
     {
         /// <summary>
         /// Initializes a new instance of <see cref="TypeCPlug"/> class.

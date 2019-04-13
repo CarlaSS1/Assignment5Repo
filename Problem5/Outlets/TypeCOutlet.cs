@@ -11,7 +11,7 @@ namespace Problem5.Plugs
     /// <summary>
     /// Represents a type c outlet.
     /// </summary>
-    class TypeCOutlet : Outlet
+    public class TypeCOutlet : Outlet
     {
         /// <summary>
         /// Initializes a new instance of <see cref="TypeCOutlet"/> class.

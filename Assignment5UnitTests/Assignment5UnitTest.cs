@@ -107,7 +107,12 @@ namespace Assignment5UnitTests
             Assert.AreEqual(outlet.ProngCount, 2);
         }
 
-        
+        /// <summary>
+        /// Tests a cpu speed that has a speed of 0 that is being passed into the motherboard
+        /// builder
+        /// 
+        /// It should throw a new ArgumentOutOfRangeException
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void AddCpu_WhenCpuSpeedIsZero_Throws()
